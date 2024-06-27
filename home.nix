@@ -47,6 +47,7 @@
     vscode
     firefox
     vlc
+    zed-editor
   ];
 
   services = {
@@ -73,10 +74,17 @@
   };
 
   programs = {
-    # ags = {
-    #   enable = true;
-    #   extraPackages = with pkgs; [gtksourceview webkitgtk accountsservice];
-    # };
+    ranger = {
+      enable = true;
+      settings = {
+        column_ratios = "1,3,4";
+        colorscheme = "snow";
+      };
+      extraConfig = ''
+        set tilde_in_titlebar true
+        set vcs_aware true
+      '';
+    };
 
     git = {
       enable = true;

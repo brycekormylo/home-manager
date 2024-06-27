@@ -36,14 +36,18 @@
       misc = {
         force_default_wallpaper = 0;
       };
+      binds = {
+        workspace_center_on = 1;
+      };
       "monitor" = ",preferred,auto,auto";
       "exec-once" = "waypaper --restore & ags & firefox";
       "$mod" = "SUPER";
       "$terminal" = "kitty";
-      "$fileManager" = "thunar";
-      "$menu" = "rofi -show drun";
+      "$fileManager" = "kitty ranger --confdir ~/.config/ranger";
+      "$menu" = "rofi -show drun -show-icons";
       "$sysMonitor" = "gotop";
       "$browser" = "firefox";
+      "windowrulev2" = "suppressevent maximize, class:.*";
       bind = [
         "$mod, T, exec, $terminal"
         "$mod, Q, killactive,"
@@ -77,8 +81,21 @@
         "$mod SHIFT, 9, movetoworkspace, 9"
         "$mod SHIFT, 0, movetoworkspace, 10"
 
+        "$mod, mouse_down, workspace, e+1"
+        "$mod, mouse_up, workspace, e-1"
+
         "$mod, S, togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"
+      ];
+      binde = [
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+      ];
+      bindl = [
+        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ];
+      bindm = [
+        "$mod, mouse272, movewindow"
+        "$mod, mouse:273, resizewindow"
       ];
     };
   };
