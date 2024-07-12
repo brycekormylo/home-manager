@@ -74,7 +74,7 @@
     };
 
     extraPlugins = with pkgs.vimPlugins; [
-      vim-css-color
+      colorizer
       nvim-web-devicons
       emmet-vim
     ];
