@@ -11,8 +11,8 @@
     plugins.comment = {
       enable = true;
       settings = {
-        opleader.line = "<leader>b";
-        toggler.line = "<leader>b";
+        opleader.line = "<C-/>";
+        toggler.line = "<C-/>";
       };
     };
 
@@ -32,10 +32,6 @@
       {
         key = "<leader>`";
         action = "<cmd>:BufferCloseAllButCurrentOrPinned<cr>";
-      }
-      {
-        key = "<leader>d";
-        action = "rustywind write .<cr>";
       }
     ];
   };

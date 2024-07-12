@@ -3,7 +3,7 @@
     enable = true;
     formatOnSave = {
       lspFallback = true;
-      timeoutMs = 500;
+      timeoutMs = 1000;
     };
     notifyOnError = true;
     formattersByFt = {

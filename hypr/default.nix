@@ -6,7 +6,8 @@
     settings = {
       input = {
         kb_layout = "us";
-        touchpad.natural_scroll = "yes";
+        kb_options = "caps:swapescape";
+        touchpad.natural_scroll = true;
         follow_mouse = 1;
         sensitivity = 0.6;
       };
@@ -25,7 +26,7 @@
       };
       dwindle = {
         pseudotile = "yes";
-        preserve_split = "yes";
+        preserve_split = true;
       };
       master = {
         new_is_master = true;
@@ -35,17 +36,18 @@
       };
       misc = {
         force_default_wallpaper = 0;
+        vfr = 0;
       };
       binds = {
         workspace_center_on = 1;
       };
       "monitor" = ",preferred,auto,auto";
-      "exec-once" = "waypaper --restore & ags & firefox";
+      "exec-once" = "dbus-update-activation-environment & --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP & waypaper --restore & ags & firefox & ivpn connect --last";
       "$mod" = "SUPER";
       "$terminal" = "kitty";
       "$fileManager" = "kitty ranger --confdir ~/.config/ranger";
       "$menu" = "rofi -show drun -show-icons";
-      "$sysMonitor" = "gotop";
+      "$sysMonitor" = "kitty gotop";
       "$browser" = "firefox";
       "windowrulev2" = "suppressevent maximize, class:.*";
       bind = [
@@ -86,12 +88,13 @@
 
         "$mod, S, togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"
+
+        "$mod, O, layoutmsg, swapsplit"
+        "$mod, C, exec, [workspace special:config;] kitty cd .config/home-manager & vi ."
       ];
       binde = [
         ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
-      ];
-      bindl = [
-        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
       ];
       bindm = [
         "$mod, mouse272, movewindow"

@@ -25,29 +25,7 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    #Dev
-    universal-ctags
-    bun
-    nodejs_22
     gh
-    zig
-    libgcc
-    arduino
-
-    #Programs
-    gotop
-    qbittorrent
-    dolphin-emu
-    clipgrab
-    pairdrop
-    inkscape
-    ungoogled-chromium
-    libreoffice
-    obsidian
-    vscode
-    firefox
-    vlc
-    zed-editor
   ];
 
   services = {
@@ -83,6 +61,7 @@
       extraConfig = ''
         set tilde_in_titlebar true
         set vcs_aware true
+        map <C-d> shell dragon -a -x %p
       '';
     };
 
@@ -90,6 +69,9 @@
       enable = true;
       userName = "Bryce Kormylo";
       userEmail = "brycekormylo@outlook.com";
+      extraConfig = {
+        http.postBuffer = 157286400;
+      };
     };
 
     kitty = {

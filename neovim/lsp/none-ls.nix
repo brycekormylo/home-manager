@@ -1,18 +1,18 @@
 {
   programs.nixvim.plugins.none-ls = {
     enable = true;
-    enableLspFormat = true;
+    enableLspFormat = false;
     updateInInsert = false;
     sources = {
       code_actions = {
         gitsigns.enable = true;
         statix.enable = true;
       };
-      diagnostics = {
-        statix.enable = true;
-        yamllint.enable = true;
-        semgrep.enable = true;
-      };
+      # diagnostics = {
+      #   statix.enable = true;
+      #   yamllint.enable = true;
+      #   semgrep.enable = true;
+      # };
       formatting = {
         alejandra.enable = true;
         black = {
