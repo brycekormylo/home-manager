@@ -4,6 +4,6 @@
     width = 0.8;
     height = 0.8;
     title = "";
-    keymaps.toggle = "<leader>t";
+    keymaps.toggle = "<leader>m";
   };
 }

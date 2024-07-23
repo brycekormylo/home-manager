@@ -29,9 +29,8 @@
 
   home.packages = with pkgs; [
     gh
+    docker
   ];
-
-  home.file = {};
 
   home.sessionVariables = {EDITOR = "nvim";};
 

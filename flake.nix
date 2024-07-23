@@ -12,15 +12,23 @@
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, nix-colors, ... }@inputs:
-    let
+  outputs = {
+    nixpkgs,
+    home-manager,
+    nixvim,
+    nix-colors,
+    ...
+  } @ inputs: let
     system = "x86_64-linux";
-  pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = nixpkgs.legacyPackages.${system};
   in {
     homeConfigurations."bryce" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
-      extraSpecialArgs = { inherit inputs; inherit nix-colors; };
-      modules = [ ./home.nix ];
+      extraSpecialArgs = {
+        inherit inputs;
+        inherit nix-colors;
+      };
+      modules = [./home.nix];
     };
   };
 }

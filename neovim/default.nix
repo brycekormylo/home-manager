@@ -7,7 +7,7 @@
     inputs.nixvim.homeManagerModules.nixvim
 
     ./ui/floaterm.nix
-    ./ui/barbar.nix
+    # ./ui/barbar.nix
     ./ui/gitsigns.nix
     ./ui/neo-tree.nix
     ./ui/indent-blankline.nix
@@ -77,6 +77,7 @@
       colorizer
       nvim-web-devicons
       emmet-vim
+      vim-sneak
     ];
   };
 }

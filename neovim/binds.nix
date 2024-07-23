@@ -19,10 +19,14 @@
     keymaps = [
       {
         key = "<leader>e";
-        action = "<cmd>:Neotree action=focus reveal toggle<CR>";
+        action = "<cmd>:Neotree action=reveal focus<CR>";
       }
       {
-        key = "<leader>a";
+        key = "<leader>E";
+        action = "<cmd>:Neotree action=toggle<CR>";
+      }
+      {
+        key = "<leader>A";
         action = "<cmd>:Alpha<cr>";
       }
       {

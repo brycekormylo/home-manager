@@ -1,4 +1,4 @@
-{
+{config, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -17,6 +17,8 @@
         border_size = 1;
         layout = "dwindle";
         allow_tearing = false;
+        "col.active_border" = "rgb(${config.colorScheme.palette.base04})";
+        "col.inactive_border" = "rgb(${config.colorScheme.palette.base02})";
       };
       decoration = {
         rounding = 4;
@@ -43,6 +45,7 @@
       };
       "monitor" = ",preferred,auto,auto";
       "exec-once" = "dbus-update-activation-environment & --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP & waypaper --restore & ags & firefox & ivpn connect --last";
+      "exec" = "ags";
       "$mod" = "SUPER";
       "$terminal" = "kitty";
       "$fileManager" = "kitty ranger --confdir ~/.config/ranger";

@@ -1,33 +1,33 @@
 @import url("./colors.css");
 
 * {
-    font-family: "Mononoki Nerd Font";
-    font-size: 11pt;
-    min-height: 0;
-    background-color: transparent;
-    text-shadow: none;
-    /* color: #691400; */
-  }
+  font-family: "Mononoki Nerd Font";
+  font-size: 11pt;
+  min-height: 0;
+  background-color: transparent;
+  text-shadow: none;
+  /* color: #691400; */
+}
 
 .top-bar {
-    margin-top: 2px;
-    margin-right: 4px;
-    margin-left: 4px;
-    margin-bottom: 4px
+  margin-top: 2px;
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-bottom: 4px;
 }
 
 .right-box {
-    background: @base01;
-    color: @base06;
-    border-radius: 15px;
-    padding: 4px;
+  background: @base01;
+  color: @base06;
+  border-radius: 15px;
+  padding: 4px;
 }
 
 .left-box {
-    background: @base01;
-    color: @base06;
-    border-radius: 15px;
-    padding: 4px 12px 4px 12px;
+  background: @base01;
+  color: @base06;
+  border-radius: 15px;
+  padding: 4px 12px 4px 12px;
 }
 
 .icon {
@@ -37,56 +37,59 @@
 }
 
 .battery-progress {
-    background-color: #BB7169;
-    border-radius: 6px;
+  background-color: #bb7169;
+  border-radius: 6px;
 }
 
 .separator {
-    color: @base0D;
+  color: @base0D;
 }
 
-.volume-indicator, .time, .date, .power-profile {
-    color: @base06;
+.volume-indicator,
+.time,
+.date,
+.power-profile {
+  color: @base06;
 }
 
 .volume-indicator {
-    margin: 0 -12px 0 0;
+  margin: 0 -12px 0 0;
 }
 
 .time {
-    margin: 0 2px 0 -6px;
+  margin: 0 2px 0 -6px;
 }
 
 .date {
-    margin: 0 -6px;
+  margin: 0 -6px;
 }
 
 .power-profile {
-    margin: 0 0 0 -8px;
+  margin: 0 0 0 -8px;
 }
 
 .brightness > * {
-    padding: 0 6px 0 0px;
+  padding: 0 6px 0 0px;
 }
 
 .brightness > * * {
-    border-color: @base0C;
-    border-radius: 12px;
+  border-color: @base0C;
+  border-radius: 12px;
 }
 
 .brightness > * > * {
-    background-color: @base03;
+  background-color: @base03;
 }
 
 button {
-    min-width: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: @base01;
-    background-image: none;
-    border: none;
-    box-shadow: none;
-    outline: none;
+  min-width: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: @base01;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
 }
 
 /* button:active {
@@ -98,24 +101,35 @@ button:hover {
 } */
 
 label {
-    font-weight: 600;
+  font-weight: 600;
+}
+
+.specialWorkspaces {
+  border-radius: 15px;
+}
+
+.specialWorkspaces button {
+  background: transparent;
+  color: @base0D;
+  border-radius: 100%;
 }
 
 .workspaces {
-    background-color: @base01;
-    border-radius: 15px;
-    padding: 0 10px 0 2px;
+  background-color: @base01;
+  border-radius: 15px;
+  padding: 0 10px 0 2px;
 }
 
 .workspaces button {
-    color: @base03;
-    border-radius: 100%;
-    /* margin: 0 4px; */
+  color: @base03;
+  border-radius: 100%;
+  /* margin: 0 4px; */
 }
 
 .workspaces button.focused {
-    color: @base0C;
+  color: @base0C;
 }
+
 /* 
 .client-title {
     color: white;
@@ -127,5 +141,5 @@ label {
 
 levelbar block,
 highlight {
-    min-height: 10px;
+  min-height: 10px;
 }
