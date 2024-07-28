@@ -1,8 +1,8 @@
 {
   programs.nixvim.plugins.none-ls = {
     enable = true;
-    enableLspFormat = false;
-    updateInInsert = false;
+    enableLspFormat = true;
+    updateInInsert = true;
     sources = {
       code_actions = {
         gitsigns.enable = true;

@@ -23,7 +23,7 @@
       }
       {
         key = "<leader>E";
-        action = "<cmd>:Neotree action=toggle<CR>";
+        action = "<cmd>:Neotree action=close<CR>";
       }
       {
         key = "<leader>A";
@@ -32,10 +32,6 @@
       {
         key = "<leader>w";
         action = "<cmd>:W<cr>";
-      }
-      {
-        key = "<leader>`";
-        action = "<cmd>:BufferCloseAllButCurrentOrPinned<cr>";
       }
     ];
   };

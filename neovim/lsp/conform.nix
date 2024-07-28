@@ -7,7 +7,7 @@
     };
     notifyOnError = true;
     formattersByFt = {
-      lua = [["stylua" "injected"]];
+      lua = ["stylua"];
       javascript = [["prettierd" "prettier"]];
       typescript = [["prettierd" "prettier"]];
       javascriptreact = [["prettierd" "prettier" "rustywind"]];

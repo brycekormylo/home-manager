@@ -16,6 +16,7 @@
     ./lsp/lspsaga.nix
     ./lsp/lsp.nix
     ./lsp/conform.nix
+    ./lsp/lint.nix
     ./lsp/trouble.nix
     ./lsp/fidget.nix
     ./lsp/none-ls.nix
@@ -25,6 +26,7 @@
     ./files/alpha.nix
     ./files/telescope.nix
     ./files/harpoon.nix
+    # ./files/tagbar.nix
 
     ./cmp/cmp.nix
     ./cmp/autopairs.nix
@@ -62,7 +64,7 @@
       autoindent = true;
       smartindent = true;
       breakindent = true;
-      scrolloff = 8;
+      scrolloff = 12;
     };
 
     colorschemes.gruvbox.enable = true;
@@ -78,6 +80,7 @@
       nvim-web-devicons
       emmet-vim
       vim-sneak
+      # vim-gutentags
     ];
   };
 }

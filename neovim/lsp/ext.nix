@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   programs.nixvim = {
-    extraPlugins = with pkgs.vimPlugins; [lspkind-nvim nvim-lspconfig];
+    plugins.lspkind.enable = true;
+    extraPlugins = with pkgs.vimPlugins; [nvim-lspconfig];
   };
 }
