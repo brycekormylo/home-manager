@@ -2,12 +2,12 @@
   programs.nixvim.plugins.none-ls = {
     enable = true;
     enableLspFormat = true;
-    updateInInsert = true;
+    updateInInsert = false;
     sources = {
-      code_actions = {
-        gitsigns.enable = true;
-        statix.enable = true;
-      };
+      # code_actions = {
+      #   gitsigns.enable = true;
+      #   statix.enable = true;
+      # };
       # diagnostics = {
       #   statix.enable = true;
       #   yamllint.enable = true;

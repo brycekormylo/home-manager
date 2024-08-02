@@ -6,15 +6,21 @@
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
 
-    ./ui/floaterm.nix
-    # ./ui/barbar.nix
-    ./ui/gitsigns.nix
-    ./ui/neo-tree.nix
-    ./ui/indent-blankline.nix
-    ./ui/fugitive.nix
+    ./cmp/cmp.nix
+    ./cmp/autopairs.nix
+    ./cmp/surround.nix
+    # ./cmp/hardtime.nix
+
+    ./debug/dap.nix
+
+    ./files/treesitter.nix
+    ./files/alpha.nix
+    ./files/telescope.nix
+    ./files/harpoon.nix
 
     ./lsp/lspsaga.nix
     ./lsp/lsp.nix
+    ./lsp/lspkind.nix
     ./lsp/conform.nix
     ./lsp/lint.nix
     ./lsp/trouble.nix
@@ -22,17 +28,19 @@
     ./lsp/none-ls.nix
     ./lsp/ext.nix
 
-    ./files/treesitter.nix
-    ./files/alpha.nix
-    ./files/telescope.nix
-    ./files/harpoon.nix
-    # ./files/tagbar.nix
-
-    ./cmp/cmp.nix
-    ./cmp/autopairs.nix
-    ./cmp/surround.nix
-
     ./snip/luasnip.nix
+    ./snip/undotree.nix
+    ./snip/emmet.nix
+    # ./snip/schemastore.nix
+
+    ./ui/floaterm.nix
+    # ./ui/barbar.nix
+    ./ui/gitsigns.nix
+    ./ui/neo-tree.nix
+    ./ui/indent-blankline.nix
+    ./ui/fugitive.nix
+    ./ui/illuminate.nix
+    ./ui/obsidian.nix
 
     ./binds.nix
   ];
@@ -78,7 +86,6 @@
     extraPlugins = with pkgs.vimPlugins; [
       colorizer
       nvim-web-devicons
-      emmet-vim
       vim-sneak
       # vim-gutentags
     ];
