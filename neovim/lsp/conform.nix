@@ -8,10 +8,10 @@
     notifyOnError = true;
     formattersByFt = {
       lua = ["stylua"];
-      javascript = [["prettierd" "prettier"]];
-      typescript = [["prettierd" "prettier"]];
-      javascriptreact = [["prettierd" "prettier" "rustywind"]];
-      typescriptreact = [["prettierd" "prettier" "rustywind"]];
+      javascript = ["prettierd" "rustywind"];
+      typescript = ["prettierd" "rustywind"];
+      javascriptreact = ["prettierd" "rustywind"];
+      typescriptreact = ["prettierd" "rustywind"];
       json = [["prettierd" "prettier"]];
       graphql = [["prettierd" "prettier"]];
       markdown = [["prettierd" "prettier"]];

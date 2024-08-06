@@ -1,20 +1,11 @@
 {
-  # programs.nixvim.plugins.neo-tree = {
-  #   enable = true;
-  #   closeIfLastWindow = false;
-  #   enableRefreshOnWrite = true;
-  #   window = {
-  #     width = 28;
-  #     autoExpandWidth = true;
-  #   };
-  # };
   programs.nixvim.plugins.neo-tree = {
     enable = true;
     enableDiagnostics = true;
     enableGitStatus = true;
     enableModifiedMarkers = true;
     enableRefreshOnWrite = true;
-    closeIfLastWindow = true;
+    closeIfLastWindow = false;
     popupBorderStyle = "rounded"; # Type: null or one of “NC”, “double”, “none”, “rounded”, “shadow”, “single”, “solid” or raw lua code
     buffers = {
       bindToCwd = true;

@@ -2,10 +2,8 @@
   programs.nixvim.plugins = {
     lsp = {
       enable = true;
-
       servers = {
-        nil_ls.enable = true;
-        tsserver.enable = true;
+        nixd.enable = true;
         cssls.enable = true;
         tailwindcss.enable = true;
         html.enable = true;
@@ -25,5 +23,6 @@
     };
     lsp-format.enable = true;
     typescript-tools.enable = true;
+    rust-tools.enable = true;
   };
 }

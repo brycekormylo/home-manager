@@ -25,7 +25,7 @@
     ./lsp/lint.nix
     ./lsp/trouble.nix
     ./lsp/fidget.nix
-    ./lsp/none-ls.nix
+    # ./lsp/none-ls.nix
     ./lsp/ext.nix
 
     ./snip/luasnip.nix
@@ -40,9 +40,10 @@
     ./ui/indent-blankline.nix
     ./ui/fugitive.nix
     ./ui/illuminate.nix
-    ./ui/obsidian.nix
+    # ./ui/obsidian.nix
 
     ./binds.nix
+    ./pkgs.nix
   ];
 
   programs.nixvim = {

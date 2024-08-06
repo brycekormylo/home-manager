@@ -2,6 +2,7 @@
   programs.nixvim.plugins = {
     cmp = {
       enable = true;
+      autoEnableSources = true;
       settings = {
         snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
         formatting = {fields = ["abbr" "kind" "menu"];};

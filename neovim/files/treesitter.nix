@@ -15,5 +15,12 @@
         clearOnCursorMove = false;
       };
     };
+    treesitter-context = {
+      enable = true;
+    };
+    treesitter-textobjects = {
+      enable = true;
+      lspInterop.enable = true;
+    };
   };
 }

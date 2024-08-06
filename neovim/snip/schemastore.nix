@@ -1,5 +1,5 @@
 {
-  programs.nixvim.plugins.schemastore = {
+  programs.nixvim.plugins.schemaStore = {
     enable = true;
     yaml.enable = true;
     json.enable = false;
