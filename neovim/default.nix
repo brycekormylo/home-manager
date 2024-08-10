@@ -7,26 +7,27 @@
     inputs.nixvim.homeManagerModules.nixvim
 
     ./cmp/cmp.nix
+    # ./cmp/coq.nix
     ./cmp/autopairs.nix
     ./cmp/surround.nix
+    ./cmp/lspkind.nix
     # ./cmp/hardtime.nix
 
     ./debug/dap.nix
 
-    ./files/treesitter.nix
     ./files/alpha.nix
-    ./files/telescope.nix
     ./files/harpoon.nix
+    ./files/oil.nix
+    ./files/treesitter.nix
+    ./files/telescope.nix
 
     ./lsp/lspsaga.nix
     ./lsp/lsp.nix
-    ./lsp/lspkind.nix
     ./lsp/conform.nix
     ./lsp/lint.nix
     ./lsp/trouble.nix
     ./lsp/fidget.nix
     # ./lsp/none-ls.nix
-    ./lsp/ext.nix
 
     ./snip/luasnip.nix
     ./snip/undotree.nix
@@ -36,7 +37,7 @@
     ./ui/floaterm.nix
     # ./ui/barbar.nix
     ./ui/gitsigns.nix
-    ./ui/neo-tree.nix
+    # ./ui/neo-tree.nix
     ./ui/indent-blankline.nix
     ./ui/fugitive.nix
     ./ui/illuminate.nix
@@ -80,7 +81,6 @@
 
     plugins = {
       lualine.enable = true;
-      oil.enable = true;
       nix.enable = true;
     };
 

@@ -2,12 +2,19 @@
   programs.nixvim = {
     plugins.lspkind = {
       enable = true;
-      symbolMap = {
-        Copilot = "";
-      };
       extraOptions = {
         maxwidth = 50;
         ellipsis_char = "...";
+      };
+      cmp.menu = {
+        buffer = "[buf]";
+        nvim_lsp = "[LSP]";
+        nvim_lua = "[api]";
+        path = "[path]";
+        luasnip = "[snip]";
+        gh-issues = "[issues]";
+        tn = "[TabNine]";
+        eruby = "[erb]";
       };
     };
     extraConfigLua = ''

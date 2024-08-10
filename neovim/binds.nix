@@ -21,14 +21,14 @@
         key = ";";
         action = ":";
       }
-      {
-        key = "<leader>e";
-        action = "<cmd>:Neotree action=reveal focus<CR>";
-      }
-      {
-        key = "<leader>E";
-        action = "<cmd>:Neotree action=close<CR>";
-      }
+      # {
+      #   key = "<leader>e";
+      #   action = "<cmd>:Neotree action=reveal focus<CR>";
+      # }
+      # {
+      #   key = "<leader>E";
+      #   action = "<cmd>:Neotree action=close<CR>";
+      # }
       {
         key = "<leader>A";
         action = "<cmd>:Alpha<cr>";
@@ -45,6 +45,22 @@
         options = {
           silent = true;
           desc = "Format";
+        };
+      }
+      {
+        mode = ["n" "v"];
+        key = "-";
+        action = "<cmd>:Oil --float<cr>";
+        options = {
+          desc = "Open parent directory";
+        };
+      }
+      {
+        mode = ["n" "v"];
+        key = "_";
+        action = "<cmd>:Oil --float<cr> _";
+        options = {
+          desc = "Open CWD";
         };
       }
     ];

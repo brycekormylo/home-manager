@@ -1,8 +1,10 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    # Dependencies for nvim-lint and conform
     nodePackages.prettier
     prettierd
     rustywind
+    eslint_d
     alejandra
     stylua
     yamlfmt
@@ -12,8 +14,8 @@
     nix
     vale
     nodePackages.jsonlint
-    eslint_d
     ruby
     hadolint
+    universal-ctags
   ];
 }

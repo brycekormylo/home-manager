@@ -5,8 +5,13 @@
       autoEnableSources = true;
       settings = {
         snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
-        formatting = {fields = ["abbr" "kind" "menu"];};
-        experimental = {ghost_text = true;};
+        formatting = {
+          fields = ["abbr" "kind" "menu"];
+        };
+        experimental = {
+          native_menu = false;
+          ghost_text = true;
+        };
         performance = {
           debounce = 60;
           fetchingTimeout = 200;
@@ -29,15 +34,28 @@
         };
 
         sources = [
-          {name = "nvim_lsp";}
-          {name = "cmp_tabby";}
+          {
+            name = "nvim_lua";
+          }
+          {
+            name = "nvim_lsp";
+          }
+          {
+            name = "cmp_tabby";
+          }
           {
             name = "path";
             keywordLength = 3;
           }
           {
+            name = "treesitter";
+          }
+          {
             name = "luasnip";
             keywordLength = 3;
+          }
+          {
+            name = "cmp-nvim-ultisnips";
           }
           {
             name = "buffer";
@@ -45,24 +63,36 @@
             option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
             keywordLength = 3;
           }
-          {name = "neorg";}
+          {
+            name = "neorg";
+          }
+          {
+            name = "gh_issues";
+          }
         ];
+
+        sorting = {
+          comparators = [
+            "require('cmp.config.compare').exact"
+            "require('cmp.config.compare').offset"
+            "require('cmp.config.compare').score"
+            "require('cmp.config.compare').recently_used"
+            "require('cmp.config.compare').kind"
+            "require('cmp.config.compare').locality"
+            "require('cmp.config.compare').length"
+            "require('cmp.config.compare').order"
+          ];
+        };
       };
     };
-    cmp-nvim-lsp = {
-      enable = true; # LSP
-    };
-    cmp-buffer = {
-      enable = true;
-    };
-    cmp-path = {
-      enable = true; # file system paths
-    };
-    cmp_luasnip = {
-      enable = true; # snippets
-    };
-    cmp-cmdline = {
-      enable = true; # autocomplete for cmdline
-    };
+    cmp-nvim-lsp.enable = true;
+    cmp-nvim-lua.enable = true;
+    cmp-nvim-ultisnips.enable = true;
+    cmp-treesitter.enable = true;
+    cmp-tabby.enable = true;
+    cmp-buffer.enable = true;
+    cmp-path.enable = true;
+    cmp_luasnip.enable = true;
+    cmp-cmdline.enable = true;
   };
 }
