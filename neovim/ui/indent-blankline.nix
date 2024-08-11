@@ -24,6 +24,9 @@
             "notify"
             "toggleterm"
             "lazyterm"
+            "markdown"
+            "md"
+            "obsidian"
           ];
         };
       };

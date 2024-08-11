@@ -13,6 +13,7 @@
     yamllint
     nix
     vale
+    markdownlint-cli
     nodePackages.jsonlint
     ruby
     hadolint

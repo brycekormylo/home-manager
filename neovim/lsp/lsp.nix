@@ -6,10 +6,6 @@
       rust-tools.enable = true;
       lsp = {
         enable = true;
-        # preConfig = ''
-        #   local coq = require('coq');
-        # '';
-        # setupWrappers = [(s: ''coq.lsp_ensure_capabilities(${s})'')];
         servers = {
           nixd.enable = true;
           cssls.enable = true;

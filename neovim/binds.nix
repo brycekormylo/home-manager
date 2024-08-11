@@ -34,8 +34,16 @@
         action = "<cmd>:Alpha<cr>";
       }
       {
+        key = "<leader>Q";
+        action = "<cmd>:q<cr>";
+      }
+      {
+        key = "<leader>qq";
+        action = "<cmd>:q<cr>";
+      }
+      {
         key = "<leader>w";
-        action = "<cmd>:W<cr>";
+        action = "<cmd>:w<cr>";
       }
 
       {

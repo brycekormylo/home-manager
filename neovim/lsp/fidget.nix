@@ -28,11 +28,11 @@
       ignore = []; # List of LSP servers to ignore
       lsp = {
         progressRingbufSize =
-          0; # Configure the nvim's LSP progress ring buffer size
+          50; # Configure the nvim's LSP progress ring buffer size
       };
       display = {
         renderLimit = 16; # How many LSP messages to show at once
-        doneTtl = 3; # How long a message should persist after completion
+        doneTtl = 8; # How long a message should persist after completion
         doneIcon = "✔"; # Icon shown when all LSP progress tasks are complete
         doneStyle = "Constant"; # Highlight group for completed LSP tasks
         progressTtl = "math.huge"; # How long a message should persist when in progress

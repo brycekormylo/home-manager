@@ -7,7 +7,6 @@
     inputs.nixvim.homeManagerModules.nixvim
 
     ./cmp/cmp.nix
-    # ./cmp/coq.nix
     ./cmp/autopairs.nix
     ./cmp/surround.nix
     ./cmp/lspkind.nix
@@ -41,7 +40,7 @@
     ./ui/indent-blankline.nix
     ./ui/fugitive.nix
     ./ui/illuminate.nix
-    # ./ui/obsidian.nix
+    ./ui/obsidian.nix
 
     ./binds.nix
     ./pkgs.nix
@@ -54,7 +53,7 @@
     luaLoader.enable = true;
 
     globals = {
-      mapleader = ",";
+      mapleader = " ";
 
       # Disable default file manager
       loaded_netrw = "1";
@@ -88,6 +87,7 @@
       colorizer
       nvim-web-devicons
       vim-sneak
+      plenary-nvim
       # vim-gutentags
     ];
   };
