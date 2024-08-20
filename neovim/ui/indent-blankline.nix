@@ -4,11 +4,12 @@
       enable = true;
       settings = {
         indent = {
-          char = "│"; # "│" or "▎"
+          # char = "▎";
+          char = "│";
         };
         scope = {
           enabled = true;
-          show_start = true;
+          show_start = false;
         };
         exclude = {
           buftypes = ["terminal" "nofile"];
@@ -25,7 +26,6 @@
             "toggleterm"
             "lazyterm"
             "markdown"
-            "md"
             "obsidian"
           ];
         };

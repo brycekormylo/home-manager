@@ -6,44 +6,58 @@
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
 
-    ./cmp/cmp.nix
     ./cmp/autopairs.nix
-    ./cmp/surround.nix
-    ./cmp/lspkind.nix
+    ./cmp/cmp.nix
     # ./cmp/hardtime.nix
+    ./cmp/lspkind.nix
+    ./cmp/surround.nix
+    # ./cmp/tailwind-colorizer.nix
+    ./cmp/wilder.nix
 
     ./debug/dap.nix
 
     ./files/alpha.nix
+    ./files/grapple.nix
     ./files/harpoon.nix
     ./files/oil.nix
+    # ./files/snipe.nix
+    ./files/flash.nix
     ./files/treesitter.nix
     ./files/telescope.nix
 
-    ./lsp/lspsaga.nix
-    ./lsp/lsp.nix
     ./lsp/conform.nix
-    ./lsp/lint.nix
-    ./lsp/trouble.nix
     ./lsp/fidget.nix
-    # ./lsp/none-ls.nix
+    ./lsp/lint.nix
+    ./lsp/lsp.nix
+    ./lsp/lspsaga.nix
+    # ./lsp/tailwind-tools.nix
+    ./lsp/trouble.nix
+    # ./lsp/wrapping.nix
 
+    ./snip/emmet.nix
     ./snip/luasnip.nix
     ./snip/undotree.nix
-    ./snip/emmet.nix
-    # ./snip/schemastore.nix
 
+    ./ui/encourage.nix
     ./ui/floaterm.nix
-    # ./ui/barbar.nix
-    ./ui/gitsigns.nix
-    # ./ui/neo-tree.nix
-    ./ui/indent-blankline.nix
     ./ui/fugitive.nix
+    ./ui/gitsigns.nix
+    ./ui/glow.nix
+    ./ui/indent-blankline.nix
     ./ui/illuminate.nix
+    ./ui/lualine.nix
+    ./ui/markview.nix
+    # ./ui/noice.nix
     ./ui/obsidian.nix
+    # ./ui/rainbow-delimiters.nix
+
+    ./utils/ccc.nix
+    ./utils/kulala.nix
+    ./utils/tsc.nix
 
     ./binds.nix
     ./pkgs.nix
+    ./colorscheme.nix
   ];
 
   programs.nixvim = {
@@ -58,6 +72,10 @@
       # Disable default file manager
       loaded_netrw = "1";
       loaded_netrwPlugin = "1";
+
+      backupdir = "~/.vim/backup//";
+      directory = "~/.vim/swap//";
+      undodir = "~/.vim/undo//";
     };
 
     clipboard = {
@@ -66,27 +84,22 @@
     };
 
     opts = {
+      mouse = "";
       updatetime = 100;
       number = true;
+      relativenumber = true;
       shiftwidth = 2;
       termguicolors = true;
-      autoindent = true;
-      smartindent = true;
-      breakindent = true;
-      scrolloff = 12;
-    };
-
-    colorschemes.gruvbox.enable = true;
-
-    plugins = {
-      lualine.enable = true;
-      nix.enable = true;
+      autoindent = false;
+      smartindent = false;
+      breakindent = false;
+      scrolloff = 24;
+      conceallevel = 2;
     };
 
     extraPlugins = with pkgs.vimPlugins; [
       colorizer
       nvim-web-devicons
-      vim-sneak
       plenary-nvim
       # vim-gutentags
     ];

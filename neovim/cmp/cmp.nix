@@ -6,17 +6,16 @@
         autoEnableSources = true;
         settings = {
           snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
-          formatting = {
-            fields = ["abbr" "kind" "menu"];
-          };
+          formatting = {fields = ["abbr" "kind" "menu"];};
           experimental = {
             native_menu = false;
-            ghost_text = true;
+            ghost_text = false;
           };
           performance = {
             debounce = 60;
             fetchingTimeout = 200;
             maxViewEntries = 12;
+            throttle = 5;
           };
           window = {
             completion = {border = "none";};
@@ -32,26 +31,34 @@
             "<CR>" = "cmp.mapping.confirm({ select = true })";
           };
           sources = [
-            {name = "nvim_lua";}
-            {name = "nvim_lsp";}
-            {name = "cmp_tabby";}
+            {name = "mkdnflow";}
             {
-              name = "path";
-              keywordLength = 3;
+              name = "nvim_lsp";
+              option = {
+                markdown_oxide = {
+                  keyword_pattern = ''
+                    [[\(\k\| \|\/\|#\)\+]]
+                  '';
+                };
+              };
             }
-            {name = "treesitter";}
             {
               name = "luasnip";
               keywordLength = 3;
             }
+            {name = "treesitter";}
             {
               name = "buffer";
               # Words from other open buffers can also be suggested.
               option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
               keywordLength = 3;
             }
-            {name = "neorg";}
-            {name = "gh_issues";}
+            {name = "cmp_tabby";}
+            {
+              name = "path";
+              keywordLength = 2;
+            }
+            {name = "nvim_lua";}
           ];
 
           sorting = {
@@ -68,14 +75,14 @@
           };
         };
       };
-      cmp-nvim-lsp.enable = true;
-      cmp-nvim-lua.enable = true;
-      cmp-treesitter.enable = true;
-      cmp-tabby.enable = true;
-      cmp-buffer.enable = true;
-      cmp-path.enable = true;
-      cmp_luasnip.enable = true;
-      cmp-cmdline.enable = true;
+      # cmp-nvim-lsp.enable = true;
+      # cmp-nvim-lua.enable = true;
+      # cmp-treesitter.enable = true;
+      # cmp-tabby.enable = true;
+      # cmp-buffer.enable = true;
+      # cmp-path.enable = true;
+      # cmp_luasnip.enable = true;
+      # cmp-cmdline.enable = true;
     };
   };
 }

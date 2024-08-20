@@ -1,26 +1,51 @@
 {
-  programs.nixvim.plugins = {
-    ts-autotag.enable = true;
-    hmts.enable = true;
-    treesitter = {
-      enable = true;
-      nixvimInjections = true;
-      folding = false;
-      indent = true;
-    };
-    treesitter-refactor = {
-      enable = true;
-      highlightDefinitions = {
+  programs.nixvim = {
+    plugins = {
+      nix.enable = true;
+      ts-autotag.enable = true;
+      hmts.enable = true;
+      treesitter = {
         enable = true;
-        clearOnCursorMove = false;
+        nixvimInjections = true;
+        folding = false;
+        settings = {
+          indent.enable = false;
+          highlight.enable = true;
+          ensureInstalled = [
+            "tsx"
+            "nix"
+            "html"
+            "markdown"
+            "markdown_inline"
+            "json"
+            "css"
+            "http"
+            "javascript"
+            "typescript"
+            "lua"
+            "regex"
+            "rust"
+            "ruby"
+            "xml"
+          ];
+          autoInstall = false;
+          sync_install = true;
+        };
       };
-    };
-    treesitter-context = {
-      enable = true;
-    };
-    treesitter-textobjects = {
-      enable = true;
-      lspInterop.enable = true;
+      treesitter-refactor = {
+        enable = true;
+        highlightDefinitions = {
+          enable = true;
+          clearOnCursorMove = true;
+        };
+      };
+      treesitter-context = {
+        enable = true;
+      };
+      treesitter-textobjects = {
+        enable = true;
+        lspInterop.enable = true;
+      };
     };
   };
 }

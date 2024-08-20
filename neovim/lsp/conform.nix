@@ -14,10 +14,11 @@
       typescriptreact = ["prettierd" "rustywind"];
       json = [["prettierd" "prettier"]];
       graphql = [["prettierd" "prettier"]];
-      markdown = [["prettierd" "prettier"]];
+      markdown = ["mdformat"];
       html = [["prettierd" "prettier"]];
       css = [["prettierd" "prettier"]];
-      nix = ["alejandra"];
+      nix = ["alejandra" "injected"];
+      "*" = ["injected"];
     };
   };
 }

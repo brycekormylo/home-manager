@@ -1,13 +1,5 @@
 {
   programs.nixvim = {
-    plugins.which-key = {
-      enable = true;
-      icons = {
-        separator = "";
-        group = "";
-      };
-    };
-
     plugins.comment = {
       enable = true;
       settings = {
@@ -21,31 +13,34 @@
         key = ";";
         action = ":";
       }
-      # {
-      #   key = "<leader>e";
-      #   action = "<cmd>:Neotree action=reveal focus<CR>";
-      # }
-      # {
-      #   key = "<leader>E";
-      #   action = "<cmd>:Neotree action=close<CR>";
-      # }
+      {
+        key = "<leader>w";
+        action = "<cmd>:w<cr>";
+      }
+      {
+        key = "<leader>z";
+        action = "<cmd>:UndotreeToggle<cr>";
+      }
+      {
+        key = "<leader>e";
+        action = "<cmd>Grapple toggle_tags<CR>";
+      }
+      {
+        key = "<leader>E";
+        action = "<cmd>Grapple toggle<CR>";
+      }
       {
         key = "<leader>A";
         action = "<cmd>:Alpha<cr>";
       }
       {
-        key = "<leader>Q";
-        action = "<cmd>:q<cr>";
+        key = "<leader>nc";
+        action = "<cmd>:CccPick<cr>";
       }
       {
-        key = "<leader>qq";
-        action = "<cmd>:q<cr>";
+        key = "<leader>nt";
+        action = "<cmd>:TSC<cr>";
       }
-      {
-        key = "<leader>w";
-        action = "<cmd>:w<cr>";
-      }
-
       {
         mode = ["n" "v"];
         key = "<leader>cf";
@@ -59,17 +54,7 @@
         mode = ["n" "v"];
         key = "-";
         action = "<cmd>:Oil --float<cr>";
-        options = {
-          desc = "Open parent directory";
-        };
-      }
-      {
-        mode = ["n" "v"];
-        key = "_";
-        action = "<cmd>:Oil --float<cr> _";
-        options = {
-          desc = "Open CWD";
-        };
+        options = {desc = "Open parent directory";};
       }
     ];
   };

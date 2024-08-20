@@ -25,7 +25,7 @@
         ''
           function(msg) return msg.lsp_client.name end
         '';
-      ignore = []; # List of LSP servers to ignore
+      ignore = [ ]; # List of LSP servers to ignore
       lsp = {
         progressRingbufSize =
           50; # Configure the nvim's LSP progress ring buffer size
@@ -35,12 +35,14 @@
         doneTtl = 8; # How long a message should persist after completion
         doneIcon = "✔"; # Icon shown when all LSP progress tasks are complete
         doneStyle = "Constant"; # Highlight group for completed LSP tasks
-        progressTtl = "math.huge"; # How long a message should persist when in progress
+        progressTtl =
+          "math.huge"; # How long a message should persist when in progress
         progressIcon = {
           pattern = "dots";
           period = 1;
         }; # Icon shown when LSP progress tasks are in progress
-        progressStyle = "WarningMsg"; # Highlight group for in-progress LSP tasks
+        progressStyle =
+          "WarningMsg"; # Highlight group for in-progress LSP tasks
         groupStyle = "Title"; # Highlight group for group name (LSP server name)
         iconStyle = "Question"; # Highlight group for group icons
         priority = 30; # Ordering priority for LSP notification group
@@ -56,7 +58,7 @@
           function (group) return tostring (group) end
         ''; # How to format a progress notification group's name
         overrides = {
-          rust_analyzer = {name = "rust-analyzer";};
+          rust_analyzer = { name = "rust-analyzer"; };
         }; # Override options from the default notification config
       };
     };
@@ -72,7 +74,7 @@
           end
         end
       '';
-      configs = {default = "require('fidget.notification').default_config";};
+      configs = { default = "require('fidget.notification').default_config"; };
 
       window = {
         normalHl = "Comment";
@@ -82,7 +84,7 @@
         maxWidth = 0;
         maxHeight = 0;
         xPadding = 1;
-        yPadding = 0;
+        yPadding = 3;
         align = "bottom";
         relative = "editor";
       };

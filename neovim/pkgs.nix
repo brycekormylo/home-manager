@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    # Dependencies for nvim-lint and conform
+    # Nix package dependencies for nvim plugins
     nodePackages.prettier
     prettierd
     rustywind
@@ -12,11 +12,17 @@
     semgrep
     yamllint
     nix
+    nixd
+    nixfmt-classic
     vale
+    mdformat
     markdownlint-cli
+    markdown-oxide
     nodePackages.jsonlint
     ruby
     hadolint
-    universal-ctags
+    ctags
+    # universal-ctags
+    curl
   ];
 }

@@ -24,14 +24,11 @@
         rounding = 4;
       };
       animations = {
-        enabled = "yes";
+        enabled = false;
       };
       dwindle = {
         pseudotile = "yes";
         preserve_split = true;
-      };
-      master = {
-        new_is_master = true;
       };
       gestures = {
         workspace_swipe = "on";

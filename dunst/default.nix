@@ -4,18 +4,19 @@
       enable = true;
       settings = {
         global = {
-          width = 300;
-          height = 300;
-          offset = "30x30";
+          width = 500;
+          corner_radius = 4;
+          offset = "10x10";
           origin = "top-right";
           transparency = 10;
-          frame_color = "#${config.colorScheme.palette.base00}";
+          frame_color = "#${config.colorScheme.palette.base0A}";
+          frame_width = 2;
           font = "Mononoki Nerd Font";
         };
 
         urgency_normal = {
-          background = "#${config.colorScheme.palette.base01}";
-          foreground = "#${config.colorScheme.palette.base06}";
+          background = "#${config.colorScheme.palette.base00}";
+          foreground = "#${config.colorScheme.palette.base05}";
           timeout = 10;
         };
       };
