@@ -36,7 +36,9 @@
       sign = false;
       virtualText = true;
     };
-    implement = {enable = false;};
+    implement = {
+      enable = false;
+    };
     rename = {
       autoSave = false;
       keys = {

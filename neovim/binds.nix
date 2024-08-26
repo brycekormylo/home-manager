@@ -9,10 +9,10 @@
     };
 
     keymaps = [
-      {
-        key = ";";
-        action = ":";
-      }
+      # {
+      #   key = ";";
+      #   action = ":";
+      # }
       {
         key = "<leader>w";
         action = "<cmd>:w<cr>";
@@ -21,14 +21,14 @@
         key = "<leader>z";
         action = "<cmd>:UndotreeToggle<cr>";
       }
-      {
-        key = "<leader>e";
-        action = "<cmd>Grapple toggle_tags<CR>";
-      }
-      {
-        key = "<leader>E";
-        action = "<cmd>Grapple toggle<CR>";
-      }
+      # {
+      #   key = "<leader>e";
+      #   action = "<cmd>Grapple toggle_tags<CR>";
+      # }
+      # {
+      #   key = "<leader>E";
+      #   action = "<cmd>Grapple toggle<CR>";
+      # }
       {
         key = "<leader>A";
         action = "<cmd>:Alpha<cr>";
@@ -53,6 +53,12 @@
       {
         mode = ["n" "v"];
         key = "-";
+        action = "<cmd>:Oil --float<cr>";
+        options = {desc = "Open parent directory";};
+      }
+      {
+        mode = ["n" "v"];
+        key = "<leader>-";
         action = "<cmd>:Oil --float<cr>";
         options = {desc = "Open parent directory";};
       }

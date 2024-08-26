@@ -31,20 +31,18 @@
             "<CR>" = "cmp.mapping.confirm({ select = true })";
           };
           sources = [
-            {name = "mkdnflow";}
             {
               name = "nvim_lsp";
-              option = {
-                markdown_oxide = {
-                  keyword_pattern = ''
-                    [[\(\k\| \|\/\|#\)\+]]
-                  '';
-                };
-              };
+              # option = {
+              #   markdown_oxide = {
+              #     keyword_pattern = "[[\(\k\| \|\/\|#\)\+]]";
+              #   };
+              # };
             }
+            {name = "mkdnflow";}
             {
               name = "luasnip";
-              keywordLength = 3;
+              keywordLength = 2;
             }
             {name = "treesitter";}
             {
@@ -53,12 +51,12 @@
               option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
               keywordLength = 3;
             }
-            {name = "cmp_tabby";}
+            # {name = "cmp_tabby";}
             {
               name = "path";
-              keywordLength = 2;
+              keywordLength = 1;
             }
-            {name = "nvim_lua";}
+            # {name = "nvim_lua";}
           ];
 
           sorting = {

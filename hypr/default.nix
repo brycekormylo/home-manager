@@ -13,7 +13,7 @@
       };
       general = {
         gaps_in = 1;
-        gaps_out = 2;
+        gaps_out = 1;
         border_size = 1;
         layout = "dwindle";
         allow_tearing = false;
@@ -21,7 +21,7 @@
         "col.inactive_border" = "rgb(${config.colorScheme.palette.base02})";
       };
       decoration = {
-        rounding = 4;
+        rounding = 2;
       };
       animations = {
         enabled = false;
@@ -29,6 +29,8 @@
       dwindle = {
         pseudotile = "yes";
         preserve_split = true;
+        force_split = 2;
+        no_gaps_when_only = 1;
       };
       gestures = {
         workspace_swipe = "on";
@@ -48,12 +50,14 @@
       "$fileManager" = "kitty ranger --confdir ~/.config/ranger";
       "$menu" = "rofi -show drun -show-icons";
       "$sysMonitor" = "kitty gotop";
+      "$notes" = "kitty & cd psi/ & vi .";
       "$browser" = "firefox";
       "windowrulev2" = "suppressevent maximize, class:.*";
       bind = [
         "$mod, T, exec, $terminal"
         "$mod, Q, killactive,"
         "$mod, M, exec, $sysMonitor"
+        "$mod, N, exec, $notes"
         "$mod, F, exec, $fileManager"
         "$mod, V, togglefloating,"
         "$mod, E, exec, $menu"

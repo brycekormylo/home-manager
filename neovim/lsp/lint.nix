@@ -4,16 +4,16 @@
       enable = true;
       lintersByFt = {
         nix = ["nix"];
-        text = ["vale"];
+        # text = ["vale"];
         json = ["jsonlint"];
         javascript = ["eslint_d"];
         typescript = ["eslint_d"];
         javascriptreact = ["eslint_d"];
         typescriptreact = ["eslint_d"];
         markdown = ["markdownlint"];
-        rst = ["vale"];
-        ruby = ["ruby"];
-        dockerfile = ["hadolint"];
+        # rst = ["vale"];
+        # ruby = ["ruby"];
+        # dockerfile = ["hadolint"];
       };
     };
     extraConfigLua = ''

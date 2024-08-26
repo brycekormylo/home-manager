@@ -5,6 +5,7 @@
       default_file_explorer = true;
       delete_to_trash = true;
       skip_confirm_for_simple_edits = true;
+      lsp_file_method.autosave_changes = true;
       columns = [
         "icon"
       ];
@@ -14,7 +15,7 @@
       };
       float = {
         padding = 2;
-        max_width = 90;
+        max_width = 80;
       };
       win_options = {
         wrap = true;

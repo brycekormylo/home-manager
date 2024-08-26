@@ -14,5 +14,17 @@
     extraConfigLua = ''
       require("snipe").setup({})
     '';
+    keymaps = [
+      {
+        mode = "n";
+        key = "<leader>e";
+        action = ''
+          <cmd>lua require("snipe").open_buffer_menu()<cr>
+        '';
+        options = {
+          desc = "Open snipe";
+        };
+      }
+    ];
   };
 }

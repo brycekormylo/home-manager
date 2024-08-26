@@ -4,7 +4,7 @@
       lsp-format.enable = false;
       lsp-status.enable = true;
       typescript-tools.enable = true;
-      rust-tools.enable = true;
+      # rust-tools.enable = true;
       lsp = {
         enable = true;
         servers = {
@@ -14,18 +14,17 @@
           html.enable = true;
           # tsserver.enable = true;
           # emmet_ls.enable = true;
-          dockerls.enable = true;
+          # dockerls.enable = true;
           jsonls.enable = true;
           lua-ls.enable = true;
           # marksman.enable = true;
-          bashls.enable = true;
-          clangd.enable = true;
-          csharp-ls.enable = true;
-          rust-analyzer = {
-            enable = true;
-            installRustc = true;
-            installCargo = true;
-          };
+          # bashls.enable = true;
+          # clangd.enable = true;
+          # rust-analyzer = {
+          #   enable = true;
+          #   installRustc = true;
+          #   installCargo = true;
+          # };
         };
       };
     };

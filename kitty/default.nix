@@ -1,6 +1,7 @@
 {config, ...}: {
   programs.kitty = {
     enable = true;
+    font.name = "CommitMono";
     # theme = "Gruvbox Dark Soft";
     settings = {
       background = "#${config.colorScheme.palette.base00}";

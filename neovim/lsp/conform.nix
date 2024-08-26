@@ -13,8 +13,8 @@
       javascriptreact = ["prettierd" "rustywind"];
       typescriptreact = ["prettierd" "rustywind"];
       json = [["prettierd" "prettier"]];
-      graphql = [["prettierd" "prettier"]];
-      markdown = ["mdformat"];
+      # graphql = [["prettierd" "prettier"]];
+      markdown = ["markdownfmt"]; # Inserts / before every bracket
       html = [["prettierd" "prettier"]];
       css = [["prettierd" "prettier"]];
       nix = ["alejandra" "injected"];
