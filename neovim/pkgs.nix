@@ -14,6 +14,7 @@
     nix
     nixd
     nixfmt-classic
+    rustfmt
     vale
     mdformat
     markdownlint-cli

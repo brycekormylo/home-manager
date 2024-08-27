@@ -17,6 +17,7 @@
       markdown = ["markdownfmt"]; # Inserts / before every bracket
       html = [["prettierd" "prettier"]];
       css = [["prettierd" "prettier"]];
+      rust = ["rustfmt"];
       nix = ["alejandra" "injected"];
       "*" = ["injected"];
     };

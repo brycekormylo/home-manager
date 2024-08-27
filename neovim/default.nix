@@ -8,13 +8,13 @@
 
     ./cmp/autopairs.nix
     ./cmp/cmp.nix
-    # ./cmp/hardtime.nix
+    ./cmp/hardtime.nix
     ./cmp/lspkind.nix
     ./cmp/surround.nix
     # ./cmp/tailwind-colorizer.nix
     ./cmp/wilder.nix
 
-    # ./debug/dap.nix
+    ./debug/dap.nix
 
     ./files/alpha.nix
     # ./files/grapple.nix
@@ -32,7 +32,7 @@
     ./lsp/lspsaga.nix
     # ./lsp/tailwind-tools.nix
     # ./lsp/trouble.nix
-    # ./lsp/wrapping.nix
+    ./lsp/wrapping.nix
 
     ./snip/emmet.nix
     ./snip/luasnip.nix
@@ -57,6 +57,7 @@
     ./utils/ccc.nix
     ./utils/kulala.nix
     ./utils/mkdnflow.nix
+    ./utils/overseer.nix
     # ./utils/reverb.nix
     ./utils/tsc.nix
     # ./utils/vim-be-good.nix

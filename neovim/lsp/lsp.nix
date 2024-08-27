@@ -4,7 +4,7 @@
       lsp-format.enable = false;
       lsp-status.enable = true;
       typescript-tools.enable = true;
-      # rust-tools.enable = true;
+      rust-tools.enable = true;
       lsp = {
         enable = true;
         servers = {
@@ -20,11 +20,18 @@
           # marksman.enable = true;
           # bashls.enable = true;
           # clangd.enable = true;
-          # rust-analyzer = {
-          #   enable = true;
-          #   installRustc = true;
-          #   installCargo = true;
-          # };
+          rust-analyzer = {
+            enable = true;
+            installRustc = true;
+            installCargo = true;
+            settings = {
+              rust-analyzer = {
+                cargo = {
+                  allFeatures = true;
+                };
+              };
+            };
+          };
         };
       };
     };

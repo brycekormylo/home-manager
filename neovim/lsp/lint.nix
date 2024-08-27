@@ -10,8 +10,7 @@
         typescript = ["eslint_d"];
         javascriptreact = ["eslint_d"];
         typescriptreact = ["eslint_d"];
-        markdown = ["markdownlint"];
-        # rst = ["vale"];
+        # markdown = ["markdownlint"];
         # ruby = ["ruby"];
         # dockerfile = ["hadolint"];
       };

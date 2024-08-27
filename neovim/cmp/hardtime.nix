@@ -3,7 +3,7 @@
     enable = true;
     enabled = true;
     disableMouse = true;
-    disabledFiletypes = ["Oil"];
+    disabledFiletypes = ["Oil" "markdown"];
     hint = true;
     maxCount = 4;
     maxTime = 1000;

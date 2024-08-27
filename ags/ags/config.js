@@ -1,5 +1,6 @@
 import brightness from "./brightness.js";
 import theme from "./theme.js";
+
 const hyprland = await Service.import("hyprland");
 // const notifications = await Service.import("notifications")
 const powerProfiles = await Service.import("powerprofiles");

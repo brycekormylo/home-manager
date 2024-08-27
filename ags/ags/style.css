@@ -1,7 +1,7 @@
 @import url("./colors.css");
 
 * {
-  font-family: "Mononoki Nerd Font";
+  font-family: "CommitMono";
   font-size: 11pt;
   min-height: 0;
   background-color: transparent;
@@ -17,14 +17,14 @@
 }
 
 .right-box {
-  background: @base01;
+  background: @base00;
   color: @base06;
   border-radius: 15px;
   padding: 4px;
 }
 
 .left-box {
-  background: @base01;
+  background: @base00;
   color: @base06;
   border-radius: 15px;
   padding: 4px 12px 4px 12px;
@@ -78,14 +78,14 @@
 }
 
 .brightness > * > * {
-  background-color: @base03;
+  background-color: @base02;
 }
 
 button {
   min-width: 0;
   padding-top: 0;
   padding-bottom: 0;
-  background-color: @base01;
+  background-color: @base00;
   background-image: none;
   border: none;
   box-shadow: none;
@@ -101,7 +101,7 @@ button:hover {
 } */
 
 label {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .specialWorkspaces {
@@ -115,13 +115,13 @@ label {
 }
 
 .workspaces {
-  background-color: @base01;
+  background-color: @base00;
   border-radius: 15px;
   padding: 0 10px 0 2px;
 }
 
 .workspaces button {
-  color: @base03;
+  color: @base02;
   border-radius: 100%;
   /* margin: 0 4px; */
 }
