@@ -2,8 +2,9 @@
   programs.kitty = {
     enable = true;
     font.name = "CommitMono";
-    # theme = "Gruvbox Dark Soft";
     settings = {
+      allow_remote_control = true;
+      enabled_layouts = "tall";
       background = "#${config.colorScheme.palette.base00}";
       foreground = "#${config.colorScheme.palette.base05}";
       selection_background = "#${config.colorScheme.palette.base02}";

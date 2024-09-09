@@ -1,25 +1,28 @@
 {
   programs.nixvim.plugins.conform-nvim = {
     enable = true;
-    formatOnSave = {
-      lspFallback = true;
-      timeoutMs = 1000;
-    };
-    notifyOnError = true;
-    formattersByFt = {
-      lua = ["stylua"];
-      javascript = ["prettierd" "rustywind"];
-      typescript = ["prettierd" "rustywind"];
-      javascriptreact = ["prettierd" "rustywind"];
-      typescriptreact = ["prettierd" "rustywind"];
-      json = [["prettierd" "prettier"]];
-      # graphql = [["prettierd" "prettier"]];
-      markdown = ["markdownfmt"]; # Inserts / before every bracket
-      html = [["prettierd" "prettier"]];
-      css = [["prettierd" "prettier"]];
-      rust = ["rustfmt"];
-      nix = ["alejandra" "injected"];
-      "*" = ["injected"];
+    settings = {
+      format_on_save = {
+        lsp_fallback = true;
+        timeout_ms = 1000;
+      };
+      notify_on_error = true;
+      formatters_by_ft = {
+        lua = ["stylua"];
+        java = ["google-java-format"];
+        javascript = ["prettierd" "rustywind"];
+        typescript = ["prettierd" "rustywind"];
+        javascriptreact = ["prettierd" "rustywind"];
+        typescriptreact = ["prettierd" "rustywind"];
+        json = [["prettierd" "prettier"]];
+        # graphql = [["prettierd" "prettier"]];
+        markdown = ["markdownfmt"]; # Inserts / before every bracket
+        html = [["prettierd" "prettier"]];
+        css = [["prettierd" "prettier"]];
+        rust = ["rustfmt"];
+        nix = ["alejandra" "injected"];
+        "*" = ["injected"];
+      };
     };
   };
 }

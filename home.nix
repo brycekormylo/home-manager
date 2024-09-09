@@ -54,6 +54,14 @@
   home.packages = with pkgs; [
     gh
     docker
+
+    #EDU
+    mars-mips
+    zulu
+    maven
+    gradle
+    bk
+    pandoc
   ];
 
   home.sessionVariables = {

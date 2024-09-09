@@ -3,67 +3,84 @@
     enable = true;
     xwayland.enable = true;
     systemd.variables = ["--all"];
+
     settings = {
       input = {
         kb_layout = "us";
         kb_options = "caps:swapescape";
         touchpad.natural_scroll = true;
-        follow_mouse = 1;
+        follow_mouse = 0;
         sensitivity = 0.6;
       };
+
       general = {
         gaps_in = 1;
-        gaps_out = 1;
+        gaps_out = 0;
         border_size = 1;
         layout = "dwindle";
         allow_tearing = false;
         "col.active_border" = "rgb(${config.colorScheme.palette.base04})";
         "col.inactive_border" = "rgb(${config.colorScheme.palette.base02})";
       };
+
       decoration = {
         rounding = 2;
       };
+
       animations = {
         enabled = false;
       };
+
       dwindle = {
         pseudotile = "yes";
         preserve_split = true;
         force_split = 2;
         no_gaps_when_only = 1;
       };
+
       gestures = {
         workspace_swipe = "on";
       };
+
       misc = {
         force_default_wallpaper = 0;
         vfr = 0;
       };
-      binds = {
-        workspace_center_on = 1;
-      };
+
+      # binds = {
+      #   workspace_center_on = 0;
+      # };
+
       "monitor" = ",preferred,auto,auto";
       "exec-once" = "dbus-update-activation-environment & --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP & waypaper --restore & ags & firefox & ivpn connect --last";
-      "exec" = "ags";
+      # "exec" = "ags";
       "$mod" = "SUPER";
       "$terminal" = "kitty";
       "$fileManager" = "kitty ranger --confdir ~/.config/ranger";
       "$menu" = "rofi -show drun -show-icons";
       "$sysMonitor" = "kitty gotop";
-      "$notes" = "kitty & cd psi/ & vi .";
+      "$notes" = "kitty --single-instance -d ~/psi vi .";
       "$browser" = "firefox";
+      "$config" = "kitty --single-instance -d ~/.config/home-manager vi .";
       "windowrulev2" = "suppressevent maximize, class:.*";
+      "workspace" = "special:magic, on-created-empty: $config ";
+      # Add command to cycle power management
+
       bind = [
-        "$mod, T, exec, $terminal"
         "$mod, Q, killactive,"
+        "$mod, T, exec, $terminal"
         "$mod, M, exec, $sysMonitor"
-        "$mod, N, exec, $notes"
-        "$mod, F, exec, $fileManager"
-        "$mod, V, togglefloating,"
-        "$mod, E, exec, $menu"
-        "$mod, P, pseudo"
-        "$mod, J, togglesplit"
         "$mod, W, exec, $browser"
+        "$mod, E, exec, $fileManager"
+        "$mod, F, exec, $menu"
+        "$mod, N, exec, $notes"
+        "$mod, C, exec, $config"
+
+        # "$mod, P, pseudo"
+        "$mod, X, togglesplit"
+        "$mod, P, togglefloating,"
+        "$mod, R, layoutmsg, swapsplit"
+        "$mod, Tab, cyclenext"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
@@ -93,17 +110,26 @@
         "$mod, S, togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"
 
-        "$mod, O, layoutmsg, swapsplit"
-        "$mod, C, exec, [workspace special:config;] kitty cd .config/home-manager & vi ."
+        # "$mod, N, togglespecialworkspace, notes"
+        # "$mod SHIFT, N, movetoworkspace, special:notes"
+        #
+        # "$mod, C, togglespecialworkspace, config"
+        # "$mod SHIFT, C, movetoworkspace, special:config"
       ];
       binde = [
         ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
         ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
+        ", XF86AudioMute, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 0%"
       ];
       bindm = [
         "$mod, mouse272, movewindow"
         "$mod, mouse:273, resizewindow"
       ];
     };
+
+    # extraConfig = ''
+    #   workspace = special:notes, on-created-empty: $notes
+    #   workspace = special:config, on-created-empty: $config
+    # '';
   };
 }

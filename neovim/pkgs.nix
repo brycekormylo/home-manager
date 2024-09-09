@@ -15,6 +15,7 @@
     nixd
     nixfmt-classic
     rustfmt
+    google-java-format
     vale
     mdformat
     markdownlint-cli
@@ -22,7 +23,7 @@
     nodePackages.jsonlint
     ruby
     hadolint
-    ctags
+    # ctags
     # universal-ctags
     curl
   ];

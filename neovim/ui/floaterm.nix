@@ -5,5 +5,6 @@
     height = 0.8;
     title = "";
     keymaps.toggle = "<leader>m";
+    borderchars = "─│─│╭╮╯╰";
   };
 }

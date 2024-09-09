@@ -26,6 +26,7 @@
             "regex"
             "rust"
             "ruby"
+            "java"
             "xml"
           ];
           autoInstall = false;

@@ -14,9 +14,9 @@
       openLink = "gx";
     };
     diagnostic = {
-      borderFollow = true;
+      borderFollow = false;
       diagnosticOnlyCurrent = false;
-      showCodeAction = true;
+      showCodeAction = false;
     };
     symbolInWinbar = {
       enable = true; # Breadcrumbs

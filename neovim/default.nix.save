@@ -14,7 +14,7 @@
     # ./cmp/tailwind-colorizer.nix
     ./cmp/wilder.nix
 
-    # ./debug/dap.nix
+    ./debug/dap.nix
 
     ./files/alpha.nix
     # ./files/grapple.nix
@@ -25,8 +25,6 @@
     ./files/treesitter.nix
     ./files/telescope.nix
 
-    ./git/diffview.nix
-
     ./lsp/conform.nix
     ./lsp/fidget.nix
     ./lsp/lint.nix
@@ -36,14 +34,14 @@
     # ./lsp/trouble.nix
     ./lsp/wrapping.nix
 
-    # ./snip/emmet.nix
+    ./snip/emmet.nix
     ./snip/luasnip.nix
-    # ./snip/undotree.nix
+    ./snip/undotree.nix
 
     # ./ui/dressing.nix
     ./ui/encourage.nix
     ./ui/floaterm.nix
-    # ./ui/fugitive.nix
+    ./ui/fugitive.nix
     ./ui/gitsigns.nix
     # ./ui/glow.nix
     ./ui/indent-blankline.nix
@@ -55,14 +53,13 @@
     # ./ui/obsidian.nix
     # ./ui/rainbow-delimiters.nix
     ./ui/satellite.nix
-    ./ui/tiny-inline-diagnostic.nix
 
     ./utils/ccc.nix
-    # ./utils/kulala.nix
+    ./utils/kulala.nix
     ./utils/mkdnflow.nix
-    # ./utils/overseer.nix
+    ./utils/overseer.nix
     # ./utils/reverb.nix
-    # ./utils/tsc.nix
+    ./utils/tsc.nix
     # ./utils/vim-be-good.nix
 
     ./binds.nix
@@ -93,12 +90,9 @@
       providers.wl-copy.enable = true;
     };
 
-    diagnostics = {
-      virtual_lines = {
-        only_current_line = false;
-      };
-      virtual_text = false;
-    };
+diagnostics = {
+  virtual_text = false;
+}
 
     opts = {
       mouse = "";
@@ -106,7 +100,6 @@
       number = true;
       relativenumber = true;
       shiftwidth = 4;
-      textwidth = 80;
       termguicolors = true;
       autoindent = false;
       smartindent = false;

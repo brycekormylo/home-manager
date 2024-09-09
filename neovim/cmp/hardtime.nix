@@ -8,6 +8,7 @@
     maxCount = 4;
     maxTime = 1000;
     restrictionMode = "hint";
+    # restrictionMode = "block";
     restrictedKeys = {
       "h" = ["n" "x"];
       "j" = ["n" "x"];

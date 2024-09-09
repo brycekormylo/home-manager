@@ -3,23 +3,53 @@
     plugins = {
       cmp = {
         enable = true;
-        autoEnableSources = true;
+        autoEnableSources = false;
         settings = {
           snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
-          formatting = {fields = ["abbr" "kind" "menu"];};
+          formatting = {
+            fields = ["abbr" "kind" "menu"];
+          };
           experimental = {
             native_menu = false;
             ghost_text = false;
           };
+          matching = {
+            disallow_fuzzy_matching = true;
+            disallow_fullfuzzy_matching = true;
+            disallow_partial_fuzzy_matching = true;
+            disallow_prefix_unmatching = true;
+          };
           performance = {
-            debounce = 60;
+            debounce = 0;
             fetchingTimeout = 200;
-            maxViewEntries = 12;
-            throttle = 5;
+            maxViewEntries = 7;
+            throttle = 0;
           };
           window = {
-            completion = {border = "none";};
-            documentation = {border = "none";};
+            completion = {
+              border = [
+                ""
+                ""
+                ""
+                ""
+                ""
+                ""
+                ""
+                ""
+              ];
+            };
+            documentation = {
+              border = [
+                "╭"
+                "─"
+                "╮"
+                "│"
+                "╯"
+                "─"
+                "╰"
+                "│"
+              ];
+            };
           };
           mapping = {
             "<C-d>" = "cmp.mapping.scroll_docs(-4)";
@@ -39,32 +69,41 @@
               #   };
               # };
             }
-            {name = "mkdnflow";}
+            {
+              name = "nvim_lsp_signature_help";
+            }
+            # {
+            #   name = "treesitter";
+            #   keywordLength = 2;
+            # }
+            # {name = "mkdnflow";}
             {
               name = "luasnip";
-              keywordLength = 2;
+              # keywordLength = 2;
             }
-            {name = "treesitter";}
             {
               name = "buffer";
               # Words from other open buffers can also be suggested.
               option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
-              keywordLength = 3;
+              # keywordLength = 3;
             }
             # {name = "cmp_tabby";}
             {
               name = "path";
-              keywordLength = 1;
+              # keywordLength = 2;
             }
-            # {name = "nvim_lua";}
+            # {
+            #   name = "nvim_lua";
+            #   keywordLength = 2;
+            # }
           ];
 
           sorting = {
             comparators = [
+              "require('cmp.config.compare').recently_used"
               "require('cmp.config.compare').exact"
               "require('cmp.config.compare').offset"
               "require('cmp.config.compare').score"
-              "require('cmp.config.compare').recently_used"
               "require('cmp.config.compare').kind"
               "require('cmp.config.compare').locality"
               "require('cmp.config.compare').length"
@@ -73,13 +112,14 @@
           };
         };
       };
-      # cmp-nvim-lsp.enable = true;
+      cmp-nvim-lsp.enable = true;
+      cmp-nvim-lsp-signature-help.enable = true;
       # cmp-nvim-lua.enable = true;
       # cmp-treesitter.enable = true;
       # cmp-tabby.enable = true;
-      # cmp-buffer.enable = true;
-      # cmp-path.enable = true;
-      # cmp_luasnip.enable = true;
+      cmp-buffer.enable = true;
+      cmp-path.enable = true;
+      cmp_luasnip.enable = true;
       # cmp-cmdline.enable = true;
     };
   };

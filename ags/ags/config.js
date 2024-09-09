@@ -149,7 +149,7 @@ function NormalWorkspaces() {
     });
   };
   return Widget.Box({
-    spacing: 4,
+    spacing: 2,
     children: [Normal(), Special()],
   });
 }
@@ -165,7 +165,7 @@ const DateTime = () => {
 
   const Icon = () =>
     Widget.Label({
-      label: " ",
+      label: "",
     });
 
   const ClockText = () =>
@@ -176,7 +176,7 @@ const DateTime = () => {
 
   const Clock = () =>
     Widget.Box({
-      spacing: 0,
+      spacing: 6,
       class_name: "time",
       children: [ClockText(), Icon()],
     });
@@ -189,7 +189,7 @@ const DateTime = () => {
 
   const DateBox = () =>
     Widget.Box({
-      spacing: 12,
+      spacing: 8,
       children: [Date(), Separator(), Clock()],
     });
 
@@ -256,8 +256,10 @@ const Cpu = () => {
   });
 
   const cpuProgress = () =>
-    Widget.Label({
-      label: cpu.bind().as((value) => `${(value * 100).toFixed().toString()}%`),
+    Widget.LevelBar({
+      class_name: "cpu",
+      widthRequest: 50,
+      value: cpu.bind().as((value) => value),
     });
 
   const cpuIcon = () =>
@@ -266,7 +268,7 @@ const Cpu = () => {
     });
 
   return Widget.Box({
-    spacing: 10,
+    spacing: 12,
     children: [cpuIcon(), cpuProgress()],
   });
 };
@@ -289,9 +291,12 @@ const Ram = () => {
         ),
     ],
   });
+
   const ramProgress = () =>
-    Widget.Label({
-      label: ram.bind().as((value) => `${(value * 100).toFixed().toString()}%`),
+    Widget.LevelBar({
+      class_name: "ram",
+      widthRequest: 50,
+      value: ram.bind().as((value) => value),
     });
 
   const ramIcon = () =>
@@ -299,7 +304,7 @@ const Ram = () => {
       label: "",
     });
   return Widget.Box({
-    spacing: 8,
+    spacing: 12,
     children: [ramIcon(), ramProgress()],
   });
 };
@@ -312,6 +317,8 @@ const PowerProfile = () => {
           return "";
         case "performance":
           return "";
+        case "power-saver":
+          return "";
         default:
           return "";
       }
@@ -341,6 +348,7 @@ const PowerProfile = () => {
           powerProfiles.active_profile = "balanced";
           break;
         default:
+          powerProfiles.active_profile = "balanced";
           break;
       }
     },
@@ -350,7 +358,7 @@ const PowerProfile = () => {
 
 const leftBox = () => {
   return Widget.Box({
-    spacing: 10,
+    spacing: 8,
     class_name: "left-box",
     hpack: "end",
     children: [Cpu(), Separator(), Ram(), Separator(), PowerProfile()],
