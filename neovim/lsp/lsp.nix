@@ -32,7 +32,7 @@
           # dockerls.enable = true;
           jsonls.enable = true;
           lua-ls.enable = true;
-          jdt-language-server.enable = true;
+          # jdt-language-server.enable = true;
           # marksman.enable = true;
           # bashls.enable = true;
           # clangd.enable = true;

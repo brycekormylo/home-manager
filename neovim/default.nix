@@ -29,16 +29,18 @@
 
     ./lsp/conform.nix
     ./lsp/fidget.nix
+    ./lsp/goto-preview.nix
+    ./lsp/inc-rename.nix
     ./lsp/lint.nix
     ./lsp/lsp.nix
-    ./lsp/lspsaga.nix
+    # ./lsp/lspsaga.nix
     # ./lsp/tailwind-tools.nix
     # ./lsp/trouble.nix
     ./lsp/wrapping.nix
 
     # ./snip/emmet.nix
     ./snip/luasnip.nix
-    # ./snip/undotree.nix
+    ./snip/undotree.nix
 
     # ./ui/dressing.nix
     ./ui/encourage.nix
@@ -52,12 +54,16 @@
     ./ui/markview.nix
     ./ui/mini.nix
     # ./ui/noice.nix
+    # ./ui/numbertoggle.nix
     # ./ui/obsidian.nix
     # ./ui/rainbow-delimiters.nix
     ./ui/satellite.nix
+    ./ui/tiny-code-action.nix
     ./ui/tiny-inline-diagnostic.nix
 
+    ./utils/aerial.nix
     ./utils/ccc.nix
+    ./utils/early-retirement.nix
     # ./utils/kulala.nix
     ./utils/mkdnflow.nix
     # ./utils/overseer.nix
@@ -73,6 +79,7 @@
   programs.nixvim = {
     enable = true;
     viAlias = true;
+    vimAlias = true;
 
     luaLoader.enable = true;
 

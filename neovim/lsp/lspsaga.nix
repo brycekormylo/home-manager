@@ -16,7 +16,7 @@
     diagnostic = {
       borderFollow = false;
       diagnosticOnlyCurrent = false;
-      showCodeAction = false;
+      showCodeAction = true;
     };
     symbolInWinbar = {
       enable = true; # Breadcrumbs

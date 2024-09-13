@@ -9,12 +9,12 @@
         kb_layout = "us";
         kb_options = "caps:swapescape";
         touchpad.natural_scroll = true;
-        follow_mouse = 0;
+        follow_mouse = 1;
         sensitivity = 0.6;
       };
 
       general = {
-        gaps_in = 1;
+        gaps_in = 0;
         gaps_out = 0;
         border_size = 1;
         layout = "dwindle";

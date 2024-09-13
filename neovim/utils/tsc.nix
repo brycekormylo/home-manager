@@ -14,5 +14,11 @@
     extraConfigLua = ''
       require("tsc").setup({})
     '';
+    keymaps = [
+      {
+        key = "<leader>nt";
+        action = "<cmd>:TSC<cr>";
+      }
+    ];
   };
 }
