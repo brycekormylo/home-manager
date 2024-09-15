@@ -22,8 +22,8 @@
           wrap = true;
         };
         keymaps = {
-          "-" = "actions.parent";
-          "<C-c>" = "actions.close";
+          "<C-c>" = "actions.parent";
+          "-" = "actions.close";
           "<C-h>" = "actions.select_split";
           "<C-l>" = "actions.refresh";
           "<C-p>" = "actions.preview";

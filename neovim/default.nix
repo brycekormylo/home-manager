@@ -20,6 +20,7 @@
     # ./files/grapple.nix
     ./files/harpoon.nix
     ./files/oil.nix
+    # ./files/portal.nix
     ./files/snipe.nix
     ./files/flash.nix
     ./files/treesitter.nix
@@ -33,9 +34,7 @@
     ./lsp/inc-rename.nix
     ./lsp/lint.nix
     ./lsp/lsp.nix
-    # ./lsp/lspsaga.nix
     # ./lsp/tailwind-tools.nix
-    # ./lsp/trouble.nix
     ./lsp/wrapping.nix
 
     # ./snip/emmet.nix
@@ -45,9 +44,7 @@
     # ./ui/dressing.nix
     ./ui/encourage.nix
     ./ui/floaterm.nix
-    # ./ui/fugitive.nix
     ./ui/gitsigns.nix
-    # ./ui/glow.nix
     ./ui/indent-blankline.nix
     ./ui/illuminate.nix
     ./ui/lualine.nix
@@ -69,7 +66,6 @@
     # ./utils/overseer.nix
     # ./utils/reverb.nix
     # ./utils/tsc.nix
-    # ./utils/vim-be-good.nix
 
     ./binds.nix
     ./pkgs.nix
@@ -114,6 +110,10 @@
       relativenumber = true;
       shiftwidth = 4;
       textwidth = 80;
+      linebreak = true;
+      # columns = 80;
+      wrap = true;
+      wrapmargin = 0;
       termguicolors = true;
       autoindent = false;
       smartindent = false;
