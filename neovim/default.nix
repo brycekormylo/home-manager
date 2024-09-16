@@ -44,13 +44,14 @@
     # ./ui/dressing.nix
     ./ui/encourage.nix
     ./ui/floaterm.nix
+    # ./ui/fine-cmdline.nix
     ./ui/gitsigns.nix
     ./ui/indent-blankline.nix
     ./ui/illuminate.nix
     ./ui/lualine.nix
     ./ui/markview.nix
     ./ui/mini.nix
-    # ./ui/noice.nix
+    ./ui/noice.nix
     # ./ui/numbertoggle.nix
     # ./ui/obsidian.nix
     # ./ui/rainbow-delimiters.nix
@@ -109,6 +110,7 @@
       number = true;
       relativenumber = true;
       shiftwidth = 4;
+      tabstop = 4;
       textwidth = 80;
       linebreak = true;
       # columns = 80;
@@ -127,6 +129,7 @@
       colorizer
       nvim-web-devicons
       plenary-nvim
+      nui-nvim
       # vim-gutentags
     ];
   };

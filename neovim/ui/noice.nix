@@ -1,20 +1,26 @@
 {
-  plugins.noice = {
+  programs.nixvim.plugins.noice = {
     enable = true;
-    notify = {enabled = false;};
+    cmdline = {
+      enabled = true;
+    };
+    notify = {
+      enabled = false;
+    };
     messages = {
-      enabled =
-        true; # Adds a padding-bottom to neovim statusline when set to false for some reason
+      enabled = false; # Adds a padding-bottom to neovim statusline when set to false for some reason
     };
     lsp = {
-      message = {enabled = true;};
+      message = {
+        enabled = false;
+      };
       progress = {
         enabled = false;
         view = "mini";
       };
     };
     popupmenu = {
-      enabled = true;
+      enabled = false;
       backend = "nui";
     };
     format = {

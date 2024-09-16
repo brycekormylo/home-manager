@@ -15,8 +15,7 @@
         javascriptreact = ["prettierd" "rustywind"];
         typescriptreact = ["prettierd" "rustywind"];
         json = [["prettierd" "prettier"]];
-        # graphql = [["prettierd" "prettier"]];
-        markdown = ["markdownfmt"]; # Inserts / before every bracket
+        # markdown = ["markdownfmt"]; # mdformat inserts / before every bracket
         html = [["prettierd" "prettier"]];
         css = [["prettierd" "prettier"]];
         rust = ["rustfmt"];

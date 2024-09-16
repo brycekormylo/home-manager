@@ -29,8 +29,9 @@
   home.packages = with pkgs; [
     gh
     docker
+    neovide
 
-    #EDU
+    # EDU
     mars-mips
     zulu
     maven

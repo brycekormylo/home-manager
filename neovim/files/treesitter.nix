@@ -29,7 +29,7 @@
             "java"
             "xml"
           ];
-          autoInstall = false;
+          autoInstall = true;
           sync_install = true;
         };
       };

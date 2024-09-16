@@ -71,8 +71,8 @@
         "$mod, T, exec, $terminal"
         "$mod, M, exec, $sysMonitor"
         "$mod, W, exec, $browser"
-        "$mod, E, exec, $fileManager"
-        "$mod, F, exec, $menu"
+        "$mod, F, exec, $fileManager"
+        "$mod, E, exec, $menu"
         "$mod, N, exec, $notes"
         "$mod, C, exec, $config"
 
