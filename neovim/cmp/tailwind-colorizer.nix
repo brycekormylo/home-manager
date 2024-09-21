@@ -13,6 +13,9 @@
     ];
     extraConfigLua = ''
       require("tailwindcss-colorizer-cmp").setup({})
+      require("cmp").config.formatting = {
+      	format = require("tailwindcss-colorizer-cmp").formatter,
+      }
     '';
   };
 }

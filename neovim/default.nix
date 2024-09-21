@@ -8,23 +8,11 @@
 
     ./cmp/autopairs.nix
     ./cmp/cmp.nix
-    ./cmp/hardtime.nix
     ./cmp/lspkind.nix
-    ./cmp/surround.nix
     # ./cmp/tailwind-colorizer.nix
     ./cmp/wilder.nix
 
     # ./debug/dap.nix
-
-    ./files/alpha.nix
-    # ./files/grapple.nix
-    ./files/harpoon.nix
-    ./files/oil.nix
-    # ./files/portal.nix
-    ./files/snipe.nix
-    ./files/flash.nix
-    ./files/treesitter.nix
-    ./files/telescope.nix
 
     ./git/diffview.nix
 
@@ -36,38 +24,55 @@
     ./lsp/lsp.nix
     # ./lsp/tailwind-tools.nix
     ./lsp/wrapping.nix
+    # ./lsp/ufo.nix
+
+    ./motion/flash.nix
+    ./motion/hardtime.nix
+    ./motion/surround.nix
+
+    ./nav/aerial.nix
+    # ./nav/alpha.nix
+    # ./nav/grapple.nix
+    ./nav/harpoon.nix
+    ./nav/oil.nix
+    # ./nav/portal.nix
+    ./nav/snipe.nix
+    ./nav/treesitter.nix
+    ./nav/telescope.nix
+
+    ./pilot/encourage.nix
+    # ./pilot/reverb.nix
 
     # ./snip/emmet.nix
     ./snip/luasnip.nix
     ./snip/undotree.nix
 
     # ./ui/dressing.nix
-    ./ui/encourage.nix
-    ./ui/floaterm.nix
-    # ./ui/fine-cmdline.nix
     ./ui/gitsigns.nix
     ./ui/indent-blankline.nix
+    # ./ui/inline-fold.nix
     ./ui/illuminate.nix
     ./ui/lualine.nix
     ./ui/markview.nix
+    ./ui/modicator.nix
     ./ui/mini.nix
     ./ui/noice.nix
-    # ./ui/numbertoggle.nix
-    # ./ui/obsidian.nix
-    # ./ui/rainbow-delimiters.nix
+    ./ui/numbertoggle.nix
     ./ui/satellite.nix
     ./ui/tiny-code-action.nix
     ./ui/tiny-inline-diagnostic.nix
 
-    ./utils/aerial.nix
     ./utils/ccc.nix
     ./utils/early-retirement.nix
+    ./utils/floaterm.nix
     # ./utils/kulala.nix
-    ./utils/mkdnflow.nix
+    # ./utils/mkdnflow.nix
+    ./utils/obsidian.nix
     # ./utils/overseer.nix
-    # ./utils/reverb.nix
+    ./utils/pomo.nix
     # ./utils/tsc.nix
 
+    # ./autocmd.nix
     ./binds.nix
     ./pkgs.nix
     ./colorscheme.nix
@@ -122,6 +127,7 @@
       breakindent = false;
       scrolloff = 24;
       conceallevel = 2;
+      # concealcursor = "";
       signcolumn = "yes";
     };
 

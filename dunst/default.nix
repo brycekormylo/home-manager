@@ -10,7 +10,7 @@
           origin = "top-right";
           transparency = 10;
           frame_color = "#${config.colorScheme.palette.base0A}";
-          frame_width = 2;
+          frame_width = 1;
           font = "Mononoki Nerd Font";
         };
 

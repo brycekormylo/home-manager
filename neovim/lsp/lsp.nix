@@ -34,6 +34,7 @@
           lua-ls.enable = true;
           # jdt-language-server.enable = true;
           marksman.enable = true;
+          yamlls.enable = true;
           # bashls.enable = true;
           # clangd.enable = true;
           rust-analyzer = {
@@ -62,6 +63,10 @@
       }
 
       require("lspconfig").markdown_oxide.setup({
+      	capabilities = capabilities,
+      })
+
+      require("lspconfig").asm_lsp.setup({
       	capabilities = capabilities,
       })
 

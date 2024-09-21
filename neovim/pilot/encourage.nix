@@ -15,6 +15,7 @@
       require("encourage").setup({
       	messages = {
       		"pilot ejecting  ",
+      		"viper's got you in the pipe, 5x5",
       		"eject now eject  ",
       		"core break in progress  ",
       		"destruct sequence engaged  ",

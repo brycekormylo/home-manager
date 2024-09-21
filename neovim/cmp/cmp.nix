@@ -22,9 +22,10 @@
           performance = {
             debounce = 0;
             fetchingTimeout = 200;
-            maxViewEntries = 7;
+            # maxViewEntries = 7;
             throttle = 0;
           };
+
           window = {
             completion = {
               border = [
@@ -51,6 +52,7 @@
               ];
             };
           };
+
           mapping = {
             "<C-d>" = "cmp.mapping.scroll_docs(-4)";
             "<C-f>" = "cmp.mapping.scroll_docs(4)";
@@ -60,18 +62,20 @@
             "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
             "<CR>" = "cmp.mapping.confirm({ select = true })";
           };
+
           sources = [
             {
               name = "nvim_lsp";
-              # option = {
-              #   markdown_oxide = {
-              #     keyword_pattern = "[[\(\k\| \|\/\|#\)\+]]";
-              #   };
-              # };
+              max_item_count = 15;
+              option = {
+                markdown_oxide = {
+                  keyword_pattern = "[[\(\k\| \|\/\|#\)\+]]";
+                };
+              };
             }
-            {
-              name = "nvim_lsp_signature_help";
-            }
+            # {
+            #   name = "nvim_lsp_signature_help";
+            # }
             # {
             #   name = "treesitter";
             #   keywordLength = 2;
@@ -79,12 +83,14 @@
             # {name = "mkdnflow";}
             {
               name = "luasnip";
+              max_item_count = 5;
               # keywordLength = 2;
             }
             {
               name = "buffer";
               # Words from other open buffers can also be suggested.
               option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
+              max_item_count = 5;
               # keywordLength = 3;
             }
             # {name = "cmp_tabby";}
@@ -113,7 +119,7 @@
         };
       };
       cmp-nvim-lsp.enable = true;
-      cmp-nvim-lsp-signature-help.enable = true;
+      # cmp-nvim-lsp-signature-help.enable = true;
       # cmp-nvim-lua.enable = true;
       # cmp-treesitter.enable = true;
       # cmp-tabby.enable = true;

@@ -7,7 +7,7 @@
         1.0e-2; # Limit the number of decimals displayed for floats
     };
     progress = {
-      pollRate = 0; # How and when to poll for progress messages
+      pollRate = 30; # How and when to poll for progress messages
       suppressOnInsert = true; # Suppress new messages while in insert mode
       ignoreDoneAlready = false; # Ignore new tasks that are already complete
       ignoreEmptyMessage =
@@ -79,11 +79,11 @@
         winblend = 0;
         border = "none"; # none, single, double, rounded, solid, shadow
         zindex = 45;
-        maxWidth = 24;
-        maxHeight = 0;
-        xPadding = 1;
+        maxWidth = 48;
+        maxHeight = 20;
+        xPadding = 3;
         yPadding = 3;
-        align = "bottom";
+        align = "top";
         relative = "editor";
       };
       view = {

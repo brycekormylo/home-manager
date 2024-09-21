@@ -9,8 +9,8 @@
         use_preview_script = "true";
         preview_directories = "true";
         preview_files = "true";
-        preview_images = "true";
-        preview_images_method = "ueberzug";
+        # preview_images = "true";
+        # preview_images_method = "ueberzug";
       };
       extraConfig = ''
         set tilde_in_titlebar true

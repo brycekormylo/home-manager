@@ -1,30 +1,32 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     # Nix package dependencies for nvim plugins
-    nodePackages.prettier
-    prettierd
-    rustywind
-    eslint_d
     alejandra
-    stylua
-    yamlfmt
-    statix
-    semgrep
-    yamllint
+    asm-lsp
+    curl
+    eslint_d
+    google-java-format
+    hadolint
+    lldb
+    markdown-oxide
+    markdownlint-cli
+    mdformat
     nix
     nixd
     nixfmt-classic
-    rustfmt
-    google-java-format
-    vale
-    mdformat
-    markdownlint-cli
-    markdown-oxide
     nodePackages.jsonlint
+    nodePackages.prettier
+    prettierd
     ruby
-    hadolint
+    rustfmt
+    rustywind
+    semgrep
+    statix
+    stylua
+    vale
+    yamlfmt
+    yamllint
     # ctags
     # universal-ctags
-    curl
   ];
 }

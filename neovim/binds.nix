@@ -15,6 +15,10 @@
         action = "<cmd>:w<cr>";
       }
       {
+        key = "<leader>q";
+        action = "<cmd>:q<cr>";
+      }
+      {
         key = "<leader>rjt";
         action = "<cmd>require('java').test.run_current_class()<CR>";
         options = {

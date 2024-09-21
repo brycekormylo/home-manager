@@ -15,12 +15,12 @@
         javascriptreact = ["prettierd" "rustywind"];
         typescriptreact = ["prettierd" "rustywind"];
         json = [["prettierd" "prettier"]];
-        # markdown = ["markdownfmt"]; # mdformat inserts / before every bracket
+        markdown = ["injected"]; # mdformat inserts / before every bracket
         html = [["prettierd" "prettier"]];
         css = [["prettierd" "prettier"]];
         rust = ["rustfmt"];
         nix = ["alejandra" "injected"];
-        "*" = ["injected"];
+        # "*" = ["injected"];
       };
     };
   };

@@ -13,13 +13,13 @@
     inputs.ags.homeManagerModules.default
     inputs.nix-colors.homeManagerModules.default
 
-    ./hypr
     ./ags
-    ./neovim
     ./dunst
-    ./ranger
-    ./kitty
     ./git
+    ./hypr
+    ./kitty
+    ./neovim
+    ./ranger
 
     ./colorscheme.nix
   ];

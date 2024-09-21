@@ -29,8 +29,8 @@
             "java"
             "xml"
           ];
-          autoInstall = true;
-          sync_install = true;
+          autoInstall = false;
+          sync_install = false;
         };
       };
       treesitter-refactor = {

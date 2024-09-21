@@ -7,7 +7,7 @@
         min_chars = 2;
         nvim_cmp = true;
       };
-      dir = "~/arc";
+      dir = "~/psi";
       disable_frontmatter = true;
       daily_notes = {
         folder = "notes/daily";
