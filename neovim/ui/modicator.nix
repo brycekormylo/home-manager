@@ -12,9 +12,9 @@
       })
     ];
     extraConfigLua = ''
-      vim.o.termguicolors = true
-      vim.o.cursorline = true
-      vim.o.number = true
+      -- vim.o.termguicolors = true
+      -- vim.o.cursorline = true
+      -- vim.o.number = true
       require("modicator").setup({})
     '';
   };

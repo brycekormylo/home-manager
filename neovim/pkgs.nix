@@ -7,7 +7,6 @@
     eslint_d
     google-java-format
     hadolint
-    lldb
     markdown-oxide
     markdownlint-cli
     mdformat

@@ -16,7 +16,7 @@
         };
         float = {
           padding = 2;
-          max_width = 56;
+          max_width = 72;
         };
         win_options = {
           wrap = true;

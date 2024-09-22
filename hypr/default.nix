@@ -79,7 +79,8 @@
         # "$mod, P, pseudo"
         "$mod, X, togglesplit"
         "$mod, P, togglefloating,"
-        "$mod, R, layoutmsg, swapsplit"
+        # "$mod, R, layoutmsg, swapsplit"
+        "$mod SHIFT, R, layoutmsg, swapsplit"
         "$mod, Tab, cyclenext"
 
         "$mod, 1, workspace, 1"

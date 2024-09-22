@@ -12,11 +12,12 @@
     keymaps = [
       {
         key = "<leader>w";
-        action = "<cmd>:w<cr>";
+        action = "<cmd>:wall<cr>";
       }
       {
         key = "<leader>q";
-        action = "<cmd>:q<cr>";
+        # action = "<cmd>:q<cr>";
+        action = ":q";
       }
       {
         key = "<leader>rjt";

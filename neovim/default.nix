@@ -31,7 +31,7 @@
     ./motion/surround.nix
 
     ./nav/aerial.nix
-    # ./nav/alpha.nix
+    ./nav/alpha.nix
     # ./nav/grapple.nix
     ./nav/harpoon.nix
     ./nav/oil.nix
@@ -50,14 +50,14 @@
     # ./ui/dressing.nix
     ./ui/gitsigns.nix
     ./ui/indent-blankline.nix
-    # ./ui/inline-fold.nix
+    ./ui/inline-fold.nix
     ./ui/illuminate.nix
     ./ui/lualine.nix
     ./ui/markview.nix
     ./ui/modicator.nix
     ./ui/mini.nix
     ./ui/noice.nix
-    ./ui/numbertoggle.nix
+    ./ui/relative-toggle.nix
     ./ui/satellite.nix
     ./ui/tiny-code-action.nix
     ./ui/tiny-inline-diagnostic.nix
@@ -72,7 +72,6 @@
     ./utils/pomo.nix
     # ./utils/tsc.nix
 
-    # ./autocmd.nix
     ./binds.nix
     ./pkgs.nix
     ./colorscheme.nix
@@ -127,7 +126,8 @@
       breakindent = false;
       scrolloff = 24;
       conceallevel = 2;
-      # concealcursor = "";
+      concealcursor = "";
+      cursorline = true;
       signcolumn = "yes";
     };
 
