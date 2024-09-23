@@ -20,7 +20,7 @@
         css = [["prettierd" "prettier"]];
         rust = ["rustfmt"];
         nix = ["alejandra" "injected"];
-        # "*" = ["injected"];
+        "*" = ["injected"];
       };
     };
   };
