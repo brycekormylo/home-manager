@@ -27,15 +27,12 @@
           };
           tailwindcss.enable = true;
           html.enable = true;
-          # tsserver.enable = true;
           # emmet_ls.enable = true;
           # dockerls.enable = true;
           jsonls.enable = true;
           lua-ls.enable = true;
-          # jdt-language-server.enable = true;
           marksman.enable = true;
           yamlls.enable = true;
-          # bashls.enable = true;
           # clangd.enable = true;
           rust-analyzer = {
             enable = true;

@@ -15,6 +15,7 @@
         javascriptreact = ["prettierd" "rustywind"];
         typescriptreact = ["prettierd" "rustywind"];
         json = [["prettierd" "prettier"]];
+        # yaml = ["yamlfix"];
         markdown = ["injected"]; # mdformat inserts / before every bracket
         html = [["prettierd" "prettier"]];
         css = [["prettierd" "prettier"]];

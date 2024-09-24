@@ -10,6 +10,7 @@
         typescript = ["eslint_d"];
         javascriptreact = ["eslint_d"];
         typescriptreact = ["eslint_d"];
+        # yaml = ["yamllint"];
         # markdown = ["markdownlint"];
         # ruby = ["ruby"];
         # dockerfile = ["hadolint"];

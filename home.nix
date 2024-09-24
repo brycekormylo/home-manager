@@ -30,6 +30,8 @@
     gh
     docker
     neovide
+    grim
+    slurp
 
     # EDU
     mars-mips

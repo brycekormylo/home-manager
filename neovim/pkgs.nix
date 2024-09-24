@@ -23,6 +23,7 @@
     statix
     stylua
     vale
+    yamlfix
     yamlfmt
     yamllint
     # ctags

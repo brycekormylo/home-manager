@@ -62,6 +62,11 @@
       "$notes" = "kitty --single-instance -d ~/psi vi .";
       "$browser" = "firefox";
       "$config" = "kitty --single-instance -d ~/.config/home-manager vi .";
+
+      "$captureAll" = "~/scripts/screenshots/captureAll.sh";
+      "$captureScreen" = "~/scripts/screenshots/captureScreen.sh";
+      "$captureArea" = "~/scripts/screenshots/captureArea.sh";
+
       "windowrulev2" = "suppressevent maximize, class:.*";
       "workspace" = "special:magic, on-created-empty: $config ";
       # Add command to cycle power management
@@ -74,7 +79,9 @@
         "$mod, F, exec, $fileManager"
         "$mod, E, exec, $menu"
         "$mod, N, exec, $notes"
-        "$mod, C, exec, $config"
+        "$mod SHIFT, A, exec, $captureAll"
+        "$mod SHIFT, Y, exec, $captureArea"
+        "$mod, Y, exec, $captureScreen"
 
         # "$mod, P, pseudo"
         "$mod, X, togglesplit"

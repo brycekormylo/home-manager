@@ -71,7 +71,12 @@
               layout_strategy = "flex",
               layout_config = {
                 horizontal = {
-                  preview_cutoff = 60,
+                  preview_cutoff = 80, --forces stretch on half-windows
+                },
+              },
+              mappings = {
+                i = {
+                  ["<esc>"] = require("telescope.actions").close,
                 },
               },
             },
@@ -80,6 +85,18 @@
                 layout_strategy = "horizontal_fused",
               },
               live_grep = {
+                layout_strategy = "horizontal_fused",
+              },
+              help_tags = {
+                layout_strategy = "horizontal_fused",
+              },
+              diagnostics = {
+                layout_strategy = "horizontal_fused",
+              },
+              git_files = {
+                layout_strategy = "horizontal_fused",
+              },
+              oldfiles = {
                 layout_strategy = "horizontal_fused",
               },
               buffers = {
