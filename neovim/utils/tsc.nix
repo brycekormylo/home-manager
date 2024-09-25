@@ -16,7 +16,7 @@
     '';
     keymaps = [
       {
-        key = "<leader>nt";
+        key = "<leader><leader>t";
         action = "<cmd>:TSC<cr>";
       }
     ];

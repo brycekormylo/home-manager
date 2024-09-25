@@ -5,7 +5,7 @@
     };
     keymaps = [
       {
-        key = "<leader>nc";
+        key = "<leader><leader>c";
         action = "<cmd>:CccPick<cr>";
       }
     ];

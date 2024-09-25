@@ -32,6 +32,8 @@
     neovide
     grim
     slurp
+    bun
+    nodejs_22
 
     # EDU
     mars-mips

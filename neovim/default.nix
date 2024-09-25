@@ -47,7 +47,7 @@
     ./snip/luasnip.nix
     ./snip/undotree.nix
 
-    # ./ui/dressing.nix
+    ./ui/dressing.nix
     ./ui/gitsigns.nix
     ./ui/indent-blankline.nix
     ./ui/inline-fold.nix
@@ -65,6 +65,7 @@
     ./utils/ccc.nix
     ./utils/early-retirement.nix
     ./utils/floaterm.nix
+    ./utils/icon-picker.nix
     # ./utils/kulala.nix
     # ./utils/mkdnflow.nix
     ./utils/obsidian.nix

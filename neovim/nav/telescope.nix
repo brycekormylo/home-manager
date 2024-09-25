@@ -66,6 +66,9 @@
               return layout
           end
 
+          local horizontal_width = 0.8
+          local horizontal_height = 0.8
+
           require("telescope").setup({
             defaults = {
               layout_strategy = "flex",
@@ -83,21 +86,45 @@
             pickers = {
               find_files = {
                 layout_strategy = "horizontal_fused",
+                layout_config = {
+                  width = horizontal_width,
+                  height = horizontal_height,
+                },
               },
               live_grep = {
                 layout_strategy = "horizontal_fused",
+                layout_config = {
+                  width = horizontal_width,
+                  height = horizontal_height,
+                },
               },
               help_tags = {
                 layout_strategy = "horizontal_fused",
+                layout_config = {
+                  width = horizontal_width,
+                  height = horizontal_height,
+                },
               },
               diagnostics = {
                 layout_strategy = "horizontal_fused",
+                layout_config = {
+                  width = horizontal_width,
+                  height = horizontal_height,
+                },
               },
               git_files = {
                 layout_strategy = "horizontal_fused",
+                layout_config = {
+                  width = horizontal_width,
+                  height = horizontal_height,
+                },
               },
               oldfiles = {
                 layout_strategy = "horizontal_fused",
+                layout_config = {
+                  width = horizontal_width,
+                  height = horizontal_height,
+                },
               },
               buffers = {
                 layout_strategy = "vertical_fused",

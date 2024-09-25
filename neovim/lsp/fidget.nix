@@ -31,7 +31,7 @@
           50; # Configure the nvim's LSP progress ring buffer size
       };
       display = {
-        renderLimit = 16; # How many LSP messages to show at once
+        renderLimit = 3; # How many LSP messages to show at once
         doneTtl = 8; # How long a message should persist after completion
         doneIcon = "✔"; # Icon shown when all LSP progress tasks are complete
         doneStyle = "Constant"; # Highlight group for completed LSP tasks
@@ -50,10 +50,14 @@
           require ("fidget.progress.display").default_format_message
         ''; # How to format a progress message
         formatAnnote = ''
-          function (msg) return msg.title end
+          function (msg)
+              return msg.title
+            end
         ''; # How to format a progress annotation
         formatGroupName = ''
-          function (group) return tostring (group) end
+          function (group)
+            return tostring (group)
+          end
         ''; # How to format a progress notification group's name
         overrides = {
           rust_analyzer = {name = "rust-analyzer";};
@@ -87,12 +91,10 @@
         relative = "editor";
       };
       view = {
-        stackUpwards = true; # Display notification items from bottom to top
+        stackUpwards = false; # Display notification items from bottom to top
         iconSeparator = " "; # Separator between group name and icon
         groupSeparator = "---"; # Separator between notification groups
-        groupSeparatorHl =
-          # Highlight group used for group separator
-          "Comment";
+        groupSeparatorHl = "Comment";
       };
     };
   };
