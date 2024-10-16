@@ -20,10 +20,10 @@
             disallow_prefix_unmatching = true;
           };
           performance = {
-            debounce = 0;
-            fetchingTimeout = 200;
-            # maxViewEntries = 7;
-            throttle = 0;
+            debounce = 10;
+            fetchingTimeout = 1000;
+            maxViewEntries = 7;
+            throttle = 10;
           };
 
           window = {
@@ -66,19 +66,20 @@
           sources = [
             {
               name = "nvim_lsp";
-              max_item_count = 15;
-              option = {
-                markdown_oxide = {
-                  keyword_pattern = "[[\(\k\| \|\/\|#\)\+]]";
-                };
-              };
+              max_item_count = 10;
+              keywordLength = 2;
+              # option = {
+              #   markdown_oxide = {
+              #     keyword_pattern = "[[\(\k\| \|\/\|#\)\+]]";
+              #   };
+              # };
+            }
+            {
+              name = "treesitter";
+              keywordLength = 1;
             }
             # {
             #   name = "nvim_lsp_signature_help";
-            # }
-            # {
-            #   name = "treesitter";
-            #   keywordLength = 2;
             # }
             # {name = "mkdnflow";}
             {
@@ -86,17 +87,18 @@
               max_item_count = 5;
               # keywordLength = 2;
             }
-            {
-              name = "buffer";
-              # Words from other open buffers can also be suggested.
-              option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
-              max_item_count = 5;
-              # keywordLength = 3;
-            }
+            # {
+            #   name = "buffer";
+            #   # Words from other open buffers can also be suggested.
+            #   # option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
+            #   indexing_internal = 1000;
+            #   max_item_count = 5;
+            #   keywordLength = 3;
+            # }
             # {name = "cmp_tabby";}
             {
               name = "path";
-              # keywordLength = 2;
+              keywordLength = 1;
             }
             # {
             #   name = "nvim_lua";
@@ -121,9 +123,9 @@
       cmp-nvim-lsp.enable = true;
       # cmp-nvim-lsp-signature-help.enable = true;
       # cmp-nvim-lua.enable = true;
-      # cmp-treesitter.enable = true;
+      cmp-treesitter.enable = true;
       # cmp-tabby.enable = true;
-      cmp-buffer.enable = true;
+      # cmp-buffer.enable = true;
       cmp-path.enable = true;
       cmp_luasnip.enable = true;
       # cmp-cmdline.enable = true;

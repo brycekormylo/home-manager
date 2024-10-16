@@ -8,7 +8,18 @@
           min_chars = 2;
           nvim_cmp = true;
         };
-        dir = "~/psi";
+        new_notes_location = "current_dir";
+        workspaces = [
+          {
+            name = "psi";
+            path = "~/psi";
+          }
+          {
+            name = "health";
+            path = "~/vaults/health";
+          }
+        ];
+        # dir = "~/psi";
         disable_frontmatter = false;
         daily_notes = {
           folder = "notes/daily";

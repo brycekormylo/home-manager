@@ -62,6 +62,7 @@
     ./ui/tiny-code-action.nix
     ./ui/tiny-inline-diagnostic.nix
 
+    # ./utils/better-escape.nix
     ./utils/ccc.nix
     ./utils/early-retirement.nix
     ./utils/floaterm.nix
@@ -71,7 +72,7 @@
     ./utils/obsidian.nix
     # ./utils/overseer.nix
     ./utils/pomo.nix
-    # ./utils/tsc.nix
+    ./utils/tsc.nix
 
     ./binds.nix
     ./pkgs.nix
@@ -92,9 +93,9 @@
       loaded_netrw = "1";
       loaded_netrwPlugin = "1";
 
-      backupdir = "~/.vim/backup//";
-      directory = "~/.vim/swap//";
-      undodir = "~/.vim/undo//";
+      backupdir = "~/.nvim/backup//";
+      directory = "~/.nvim/swap//";
+      undodir = "~/.nvim/undo//";
     };
 
     clipboard = {
@@ -118,8 +119,8 @@
       tabstop = 4;
       textwidth = 80;
       linebreak = true;
-      # columns = 80;
       wrap = true;
+      columns = 80;
       wrapmargin = 0;
       termguicolors = true;
       autoindent = false;
@@ -137,7 +138,6 @@
       nvim-web-devicons
       plenary-nvim
       nui-nvim
-      # vim-gutentags
     ];
   };
 }

@@ -6,20 +6,18 @@
   home = {
     username = "bryce";
     homeDirectory = "/home/bryce";
-    stateVersion = "23.11";
+    stateVersion = "24.11";
   };
 
   imports = [
     inputs.ags.homeManagerModules.default
     inputs.nix-colors.homeManagerModules.default
 
-    ./ags
-    ./dunst
     ./git
-    ./hypr
-    ./kitty
+    ./gui
     ./neovim
-    ./ranger
+    ./terminal
+    ./utils
 
     ./colorscheme.nix
   ];
@@ -27,13 +25,10 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    gh
     docker
     neovide
-    grim
-    slurp
-    bun
-    nodejs_22
+    bash
+    neofetch
 
     # EDU
     mars-mips
@@ -50,6 +45,6 @@
 
   programs.home-manager.enable = true;
 
-  # Update Plugin Command
+  # Update plugins
   # cd .config/home-manager && nix flake update && home-manager switch
 }

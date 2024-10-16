@@ -1,4 +1,14 @@
-{config, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
+  home.pointerCursor = {
+    name = "phinger-cursors-light";
+    package = pkgs.phinger-cursors;
+    size = 32;
+    gtk.enable = true;
+  };
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -51,6 +61,24 @@
       #   workspace_center_on = 0;
       # };
 
+      "env" = [
+        "HYPRCURSOR_SIZE,24"
+        "HYPRCURSOR_THEME,phinger-cursors"
+
+        "XCURSOR_SIZE,24"
+        "XCURSOR_THEME,phinger-cursors"
+
+        "GDK_BACKEND,wayland,x11,*"
+
+        "QT_QPA_PLATFORM,wayland;xcb"
+        "SDL_VIDEODRIVER,wayland"
+        "CLUTTER_BACKEND,wayland"
+
+        "XDG_CURRENT_DESKTOP,Hyprland"
+        "XDG_SESSION_TYPE,wayland"
+        "XDG_SESSION_DESKTOP,Hyprland"
+      ];
+
       "monitor" = ",preferred,auto,auto";
       "exec-once" = "dbus-update-activation-environment & --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP & waypaper --restore & ags & firefox & ivpn connect --last";
       # "exec" = "ags";
@@ -60,8 +88,10 @@
       "$menu" = "rofi -show drun -show-icons";
       "$sysMonitor" = "kitty gotop";
       "$notes" = "kitty --single-instance -d ~/psi vi .";
+      "$health" = "kitty --single-instance -d ~/vaults/health vi .";
       "$browser" = "firefox";
-      "$config" = "kitty --single-instance -d ~/.config/home-manager vi .";
+      # "$config" = "kitty --single-instance -d ~/.config/home-manager vi .";
+      "$config" = "kitty --single-instance -d ~/.config/home-manager bash dev.sh";
 
       "$captureAll" = "~/scripts/screenshots/captureAll.sh";
       "$captureScreen" = "~/scripts/screenshots/captureScreen.sh";
@@ -79,6 +109,7 @@
         "$mod, F, exec, $fileManager"
         "$mod, E, exec, $menu"
         "$mod, N, exec, $notes"
+        "$mod, H, exec, $health"
         "$mod SHIFT, A, exec, $captureAll"
         "$mod SHIFT, Y, exec, $captureArea"
         "$mod, Y, exec, $captureScreen"

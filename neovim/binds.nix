@@ -3,8 +3,8 @@
     plugins.comment = {
       enable = true;
       settings = {
-        opleader.line = "<C-/>";
-        toggler.line = "<C-/>";
+        opleader.line = "<leader>x";
+        toggler.line = "<leader>x";
       };
     };
 
@@ -15,10 +15,14 @@
         action = "<cmd>:wall<cr>";
       }
       {
-        key = "<leader>q";
-        # action = "<cmd>:q<cr>";
-        action = ":q";
+        key = ":W";
+        action = "";
       }
+      # {
+      #   key = "<leader>q";
+      # action = "<cmd>:q<cr>";
+      #   action = ":q";
+      # }
       {
         key = "<leader>rjt";
         action = "<cmd>require('java').test.run_current_class()<CR>";

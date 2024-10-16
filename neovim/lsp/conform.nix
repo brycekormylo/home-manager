@@ -4,7 +4,7 @@
     settings = {
       format_on_save = {
         lsp_fallback = true;
-        timeout_ms = 1000;
+        timeout_ms = 2000;
       };
       notify_on_error = true;
       formatters_by_ft = {
@@ -21,7 +21,7 @@
         css = [["prettierd" "prettier"]];
         rust = ["rustfmt"];
         nix = ["alejandra" "injected"];
-        "*" = ["injected"];
+        # "*" = ["injected"];
       };
     };
   };

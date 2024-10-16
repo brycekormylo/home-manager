@@ -25,7 +25,6 @@
             "lua"
             "regex"
             "rust"
-            "ruby"
             "java"
             "xml"
           ];

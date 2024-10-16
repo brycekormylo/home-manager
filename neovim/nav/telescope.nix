@@ -26,6 +26,7 @@
               "^.git/"
               "^.mypy_cache/"
               "^__pycache__/"
+              "tags"
               "^output/"
               "^data/"
               "%.ipynb"
