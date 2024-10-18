@@ -6,6 +6,7 @@
       floatPrecision =
         1.0e-2; # Limit the number of decimals displayed for floats
     };
+
     progress = {
       pollRate = 30; # How and when to poll for progress messages
       suppressOnInsert = true; # Suppress new messages while in insert mode
@@ -51,8 +52,8 @@
         ''; # How to format a progress message
         formatAnnote = ''
           function (msg)
-              return msg.title
-            end
+            return msg.title
+          end
         ''; # How to format a progress annotation
         formatGroupName = ''
           function (group)
@@ -64,6 +65,7 @@
         }; # Override options from the default notification config
       };
     };
+
     notification = {
       pollRate = 10; # How frequently to update and render notifications
       filter = "info"; # “off”, “error”, “warn”, “info”, “debug”, “trace”
@@ -76,15 +78,23 @@
           end
         end
       '';
-      configs = {default = "require('fidget.notification').default_config";};
+      configs = {
+        default = {
+          iconOnLeft = false;
+          infoAnnote = "⁝";
+          warnAnnote = "";
+          errorAnnote = "";
+          debugAnnote = "";
+        };
+      };
 
       window = {
         normalHl = "Comment";
-        winblend = 0;
-        border = "none"; # none, single, double, rounded, solid, shadow
+        winblend = 100;
+        border = "solid"; # none, single, double, rounded, solid, shadow
         zindex = 45;
-        maxWidth = 48;
-        maxHeight = 20;
+        maxWidth = 60;
+        maxHeight = 200;
         xPadding = 3;
         yPadding = 3;
         align = "top";

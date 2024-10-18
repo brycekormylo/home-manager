@@ -49,7 +49,8 @@
 
     ./ui/dressing.nix
     ./ui/gitsigns.nix
-    ./ui/indent-blankline.nix
+    ./ui/hlchunk.nix
+    # ./ui/indent-blankline.nix
     ./ui/inline-fold.nix
     ./ui/illuminate.nix
     ./ui/lualine.nix

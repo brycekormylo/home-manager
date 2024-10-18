@@ -20,8 +20,6 @@
     nodePackages.jsonlint
     nodejs_22
     python3
-    # nodePackages.nodejs
-    # nodePackages.eslint_d
     nodePackages.prettier
     npm-check
     prettierd
@@ -38,6 +36,5 @@
     yamllint
     zig
     # markdown-oxide
-    # universal-ctags # Dont think this works with gutentags
   ];
 }
