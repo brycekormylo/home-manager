@@ -32,7 +32,7 @@
           50; # Configure the nvim's LSP progress ring buffer size
       };
       display = {
-        renderLimit = 3; # How many LSP messages to show at once
+        renderLimit = 8; # How many LSP messages to show at once
         doneTtl = 8; # How long a message should persist after completion
         doneIcon = "✔"; # Icon shown when all LSP progress tasks are complete
         doneStyle = "Constant"; # Highlight group for completed LSP tasks

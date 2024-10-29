@@ -1,12 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
-  home.sessionVariables = {
-    NIXD_FLAGS = "--inlay-hints=true";
-  };
-
+{pkgs, ...}: {
   programs.nixvim = {
     plugins = {
       lsp-format.enable = false;
@@ -21,23 +13,24 @@
       lsp = {
         enable = true;
         servers = {
-          # nixd = {
-          #   enable = true;
-          #   cmd = ["nixd"];
-          #   settings = {
-          #     formatting.command = ["nixfmt"];
-          #     nixpkgs = {
-          #       expr = "import <nixpkgs> { }";
-          #     };
-          #     options = {
-          #       home-manager = {
-          #         expr = "(import <home-manager/modules> { configuration =
-          #           ~/.config/home-manager/home.nix; pkgs = import <nixpkgs> {};
-          #         }).options";
-          #       };
-          #     };
-          #   };
-          # };
+          nixd = {
+            enable = true;
+            cmd = ["nixd"];
+            settings = {
+              formatting.command = ["alejandra"];
+              nixpkgs = {
+                expr = "import <nixpkgs> { }";
+              };
+              options = {
+                nixos = {
+                  expr = "(builtins.getFlake \"/etc/nixos\").nixosConfigurations.pathfinder.options";
+                };
+                home-manager = {
+                  expr = "(builtins.getFlake \"/home/bryce/.config/home-manager\").homeConfigurations.bryce.options";
+                };
+              };
+            };
+          };
 
           # emmet_ls.enable = true;
           denols.enable = true;
@@ -97,28 +90,6 @@
       }
 
       local nvim_lsp = require("lspconfig")
-
-      nvim_lsp.nixd.setup({
-      	cmd = { "nixd" },
-      	settings = {
-      		nixd = {
-      			nixpkgs = {
-      				expr = "import <nixpkgs> { }",
-      			},
-      			formatting = {
-      				command = { "alejandra" },
-      			},
-      			-- options = {
-      			-- 	nixos = {
-      			-- 		expr = "let flake = builtins.getFlake(toString ./.); in flake.nixosConfigurations.pathfinder.options",
-      			-- 	},
-      			-- 	home_manager = {
-      			-- 		expr = "let flake = builtins.getFlake(toString ./.); in flake.homeConfigurations.pathfinder.options",
-      			-- 	},
-      			-- },
-      		},
-      	},
-      })
 
       -- Allows use of deno without removing npm
       nvim_lsp.denols.setup({

@@ -17,13 +17,16 @@
     ./git/diffview.nix
     # ./git/gitgraph.nix
 
+    ./lsp/boo.nix
     ./lsp/conform.nix
     ./lsp/fidget.nix
     ./lsp/goto-preview.nix
     ./lsp/inc-rename.nix
     ./lsp/lint.nix
     ./lsp/lsp.nix
+    ./lsp/lsp-endhints.nix
     # ./lsp/tailwind-tools.nix
+    ./lsp/workspace-diagnostics.nix
     ./lsp/wrapping.nix
     # ./lsp/ufo.nix
 
@@ -115,7 +118,7 @@
 
     opts = {
       mouse = "";
-      updatetime = 100;
+      updatetime = 50;
       number = true;
       relativenumber = true;
       shiftwidth = 4;
@@ -133,6 +136,7 @@
       conceallevel = 2;
       concealcursor = "";
       cursorline = true;
+      cursorcolumn = false;
       signcolumn = "yes";
     };
 

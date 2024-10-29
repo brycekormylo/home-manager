@@ -41,7 +41,7 @@
               "%.ipynb"
             ];
 
-            path_display = "filename_first";
+            path_display = ["filename_first"];
             set_env.COLORTERM = "truecolor";
             layout_config = {
               prompt_position = "top";
