@@ -27,6 +27,8 @@
         gaps_in = 0;
         gaps_out = 0;
         border_size = 1;
+        resize_on_border = true;
+        hover_icon_on_border = false;
         layout = "dwindle";
         allow_tearing = false;
         "col.active_border" = "rgb(${config.colorScheme.palette.base04})";

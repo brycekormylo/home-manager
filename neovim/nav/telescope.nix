@@ -6,6 +6,13 @@
         extensions = {
           fzf-native.enable = true;
           ui-select.enable = true;
+          frecency.enable = true;
+          manix = {
+            enable = true;
+            settings = {
+              cword = false;
+            };
+          };
         };
         keymaps = {
           "<leader>ff" = "find_files";
@@ -14,6 +21,8 @@
           "<leader>b" = "buffers";
           "<leader>fh" = "help_tags";
           "<leader>fd" = "diagnostics";
+          "<leader>fr" = "frecency";
+          "<leader>fn" = "manix";
 
           "<C-p>" = "git_files";
           "<leader>p" = "oldfiles";
@@ -72,8 +81,10 @@
 
           require("telescope").setup({
             defaults = {
-              layout_strategy = "flex",
+              layout_strategy = "horizontal_fused",
               layout_config = {
+                width = horizontal_width,
+                height = horizontal_height,
                 horizontal = {
                   preview_cutoff = 80, --forces stretch on half-windows
                 },
@@ -84,49 +95,9 @@
                 },
               },
             },
+
             pickers = {
-              find_files = {
-                layout_strategy = "horizontal_fused",
-                layout_config = {
-                  width = horizontal_width,
-                  height = horizontal_height,
-                },
-              },
-              live_grep = {
-                layout_strategy = "horizontal_fused",
-                layout_config = {
-                  width = horizontal_width,
-                  height = horizontal_height,
-                },
-              },
-              help_tags = {
-                layout_strategy = "horizontal_fused",
-                layout_config = {
-                  width = horizontal_width,
-                  height = horizontal_height,
-                },
-              },
-              diagnostics = {
-                layout_strategy = "horizontal_fused",
-                layout_config = {
-                  width = horizontal_width,
-                  height = horizontal_height,
-                },
-              },
-              git_files = {
-                layout_strategy = "horizontal_fused",
-                layout_config = {
-                  width = horizontal_width,
-                  height = horizontal_height,
-                },
-              },
-              oldfiles = {
-                layout_strategy = "horizontal_fused",
-                layout_config = {
-                  width = horizontal_width,
-                  height = horizontal_height,
-                },
-              },
+
               buffers = {
                 layout_strategy = "vertical_fused",
                 layout_config = {

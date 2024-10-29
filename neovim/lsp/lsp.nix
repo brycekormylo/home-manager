@@ -1,4 +1,12 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
+  home.sessionVariables = {
+    NIXD_FLAGS = "--inlay-hints=true";
+  };
+
   programs.nixvim = {
     plugins = {
       lsp-format.enable = false;
@@ -9,12 +17,35 @@
         data = "/home/bryce/.cache/jtdls/workspace/";
       };
       rust-tools.enable = true;
+
       lsp = {
         enable = true;
         servers = {
-          nil_ls = {
-            enable = true;
-          };
+          # nixd = {
+          #   enable = true;
+          #   cmd = ["nixd"];
+          #   settings = {
+          #     formatting.command = ["nixfmt"];
+          #     nixpkgs = {
+          #       expr = "import <nixpkgs> { }";
+          #     };
+          #     options = {
+          #       home-manager = {
+          #         expr = "(import <home-manager/modules> { configuration =
+          #           ~/.config/home-manager/home.nix; pkgs = import <nixpkgs> {};
+          #         }).options";
+          #       };
+          #     };
+          #   };
+          # };
+
+          # emmet_ls.enable = true;
+          denols.enable = true;
+          dockerls.enable = true;
+          html.enable = true;
+          jsonls.enable = true;
+          tailwindcss.enable = true;
+          ts_ls.enable = true;
           cssls = {
             enable = true;
             settings = {
@@ -25,17 +56,7 @@
               };
             };
           };
-          bashls.enable = true;
-          tailwindcss.enable = true;
-          html.enable = true;
-          denols.enable = true;
-          # emmet_ls.enable = true;
-          # dockerls.enable = true;
-          jsonls.enable = true;
-          lua_ls.enable = true;
-          marksman.enable = true;
-          yamlls.enable = true;
-          clangd.enable = true;
+
           rust_analyzer = {
             enable = true;
             installRustc = true;
@@ -48,9 +69,23 @@
               };
             };
           };
+
+          asm_lsp.enable = true;
+          bashls.enable = true;
+          clangd.enable = true;
+          lua_ls.enable = true;
+          yamlls.enable = true;
+
+          marksman.enable = true;
+          # markdown_oxide.enable = true;
+          typos_lsp = {
+            enable = true;
+            filetypes = ["markdown" "md"];
+          };
         };
       };
     };
+
     extraPlugins = with pkgs.vimPlugins; [nvim-lspconfig];
     extraConfigLua = ''
       local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -61,15 +96,31 @@
       	},
       }
 
-      -- require("lspconfig").markdown_oxide.setup({
-      -- 	capabilities = capabilities,
-      -- })
       local nvim_lsp = require("lspconfig")
 
-      nvim_lsp.asm_lsp.setup({
-      	capabilities = capabilities,
+      nvim_lsp.nixd.setup({
+      	cmd = { "nixd" },
+      	settings = {
+      		nixd = {
+      			nixpkgs = {
+      				expr = "import <nixpkgs> { }",
+      			},
+      			formatting = {
+      				command = { "alejandra" },
+      			},
+      			-- options = {
+      			-- 	nixos = {
+      			-- 		expr = "let flake = builtins.getFlake(toString ./.); in flake.nixosConfigurations.pathfinder.options",
+      			-- 	},
+      			-- 	home_manager = {
+      			-- 		expr = "let flake = builtins.getFlake(toString ./.); in flake.homeConfigurations.pathfinder.options",
+      			-- 	},
+      			-- },
+      		},
+      	},
       })
 
+      -- Allows use of deno without removing npm
       nvim_lsp.denols.setup({
       	on_attach = on_attach,
       	root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),

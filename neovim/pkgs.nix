@@ -11,12 +11,13 @@
     go_1_22
     google-java-format
     hadolint
+    manix
     markdownlint-cli
     mdformat
     mono
     nix
     nixd
-    nixfmt-classic
+    # nixfmt-classic
     nodePackages.jsonlint
     nodejs_22
     python3

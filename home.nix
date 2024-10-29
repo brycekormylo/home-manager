@@ -29,12 +29,19 @@
     neovide
     bash
     neofetch
+    vscode
+    nix-prefetch-github
+
+    # PHOTOGRAPHY
+    rawtherapee
+    ansel
 
     # EDU
     mars-mips
     zulu
-    maven
     gradle
+
+    # READER
     bk
     pandoc
   ];

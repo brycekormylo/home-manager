@@ -15,6 +15,7 @@
     # ./debug/dap.nix
 
     ./git/diffview.nix
+    # ./git/gitgraph.nix
 
     ./lsp/conform.nix
     ./lsp/fidget.nix
@@ -70,6 +71,7 @@
     ./utils/icon-picker.nix
     # ./utils/kulala.nix
     # ./utils/mkdnflow.nix
+    # ./utils/molten.nix
     ./utils/obsidian.nix
     # ./utils/overseer.nix
     ./utils/pomo.nix

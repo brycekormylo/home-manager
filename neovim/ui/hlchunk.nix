@@ -38,8 +38,13 @@
       		style = {
       			{ fg = "#3c3836" },
       		},
-      		ahead_lines = 5,
+      		ahead_lines = 2,
       		delay = 0,
+      		filter_list = {
+      			function(v)
+      				return v.level ~= 1
+      			end,
+      		},
       	},
       })
     '';
