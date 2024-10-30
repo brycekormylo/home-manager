@@ -1,7 +1,8 @@
 {
   imports = [
     ./arr.nix
-    ./yt-dlp.nix
+    ./firefox.nix
     ./gaming.nix
+    ./yt-dlp.nix
   ];
 }

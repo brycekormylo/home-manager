@@ -31,6 +31,7 @@
     neofetch
     vscode
     nix-prefetch-github
+    diskonaut
 
     # PHOTOGRAPHY
     rawtherapee

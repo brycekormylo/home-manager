@@ -16,8 +16,7 @@
     mdformat
     mono
     nix
-    # nixd
-    # nixfmt-classic
+    nixd
     nodePackages.jsonlint
     nodejs_22
     python3

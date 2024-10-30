@@ -10,6 +10,10 @@
     ags.url = "github:Aylur/ags";
     nixvim.url = "github:nix-community/nixvim";
     nix-colors.url = "github:misterio77/nix-colors";
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -30,5 +34,7 @@
       };
       modules = [./home.nix];
     };
+    # For dev env
+    # devShells.x86_64-linux.default = pkgs.mkShell {};
   };
 }
