@@ -12,7 +12,11 @@
       })
     ];
     extraConfigLua = ''
-      require("early-retirement").setup({})
+      require("early-retirement").setup({
+      	defaultOps = {
+      		minimumBufferNum = 1,
+      	},
+      })
     '';
   };
 }

@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   programs.nixvim = {
     plugins = {
       lsp-signature = {
@@ -7,7 +7,7 @@
           hint_enable = true;
           hint_inline = "eol";
           hint_prefix = "🐼 ";
-        }
+        };
       };
     };
   };

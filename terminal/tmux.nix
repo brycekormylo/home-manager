@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   programs.tmux = {
     enable = true;
     historyLimit = 2000;

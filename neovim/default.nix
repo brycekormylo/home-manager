@@ -25,8 +25,10 @@
     ./lsp/lint.nix
     ./lsp/lsp.nix
     ./lsp/lsp-endhints.nix
+    ./lsp/lsp-signature.nix
+    ./lsp/otter.nix
     # ./lsp/tailwind-tools.nix
-    ./lsp/workspace-diagnostics.nix
+    # ./lsp/workspace-diagnostics.nix
     ./lsp/wrapping.nix
     # ./lsp/ufo.nix
 
@@ -54,7 +56,6 @@
     ./ui/dressing.nix
     ./ui/gitsigns.nix
     ./ui/hlchunk.nix
-    # ./ui/indent-blankline.nix
     ./ui/inline-fold.nix
     ./ui/illuminate.nix
     ./ui/lualine.nix
@@ -67,7 +68,6 @@
     ./ui/tiny-code-action.nix
     ./ui/tiny-inline-diagnostic.nix
 
-    # ./utils/better-escape.nix
     ./utils/ccc.nix
     ./utils/early-retirement.nix
     ./utils/floaterm.nix

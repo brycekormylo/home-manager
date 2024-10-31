@@ -1,21 +1,24 @@
 {pkgs, ...}: {
+  home.sessionVariables.NIXD_FLAGS = "-log=debug";
+
   programs.nixvim = {
     plugins = {
-      lsp-format.enable = false;
+      lsp-format.enable = true;
       lsp-status.enable = true;
       # typescript-tools.enable = true;
       nvim-jdtls = {
         enable = true;
         data = "/home/bryce/.cache/jtdls/workspace/";
       };
-      rust-tools.enable = true;
+      rustaceanvim.enable = true;
 
       lsp = {
         enable = true;
         servers = {
           nixd = {
             enable = true;
-            cmd = ["nixd"];
+            # cmd = ["nixd"];
+            # filetypes = ["nix"];
             settings = {
               formatting.command = ["alejandra"];
               nixpkgs = {
@@ -23,10 +26,14 @@
               };
               options = {
                 nixos = {
-                  expr = "(builtins.getFlake \"/etc/nixos\").nixosConfigurations.pathfinder.options";
+                  expr = ''
+                    import <nixpkgs> { }
+                  '';
                 };
-                home-manager = {
-                  expr = "(builtins.getFlake \"/home/bryce/.config/home-manager\").homeConfigurations.bryce.options";
+                home_manager = {
+                  expr = ''
+                    (builtins.getFlake "./.config/home-manager").homeConfigurations."bryce".options',
+                  '';
                 };
               };
             };
@@ -45,19 +52,6 @@
               css = {
                 lint = {
                   unknownAtRules = "ignore";
-                };
-              };
-            };
-          };
-
-          rust_analyzer = {
-            enable = true;
-            installRustc = true;
-            installCargo = true;
-            settings = {
-              rust-analyzer = {
-                cargo = {
-                  allFeatures = true;
                 };
               };
             };
@@ -91,6 +85,11 @@
 
       local nvim_lsp = require("lspconfig")
 
+      nvim_lsp.nixd.setup({
+      	-- on_attach = on_attach,
+      	capabilities = capabilities,
+      })
+
       -- Allows use of deno without removing npm
       nvim_lsp.denols.setup({
       	on_attach = on_attach,
@@ -111,3 +110,16 @@
     '';
   };
 }
+# nixos = {
+#   expr = ''
+#     (let pkgs = import <nixpkgs> { }; in (pkgs.lib.evalModules { modules =  (import "${inputs.nixpkgs}/nixos/modules/module-list.nix") ++ [ ({...}: { nixpkgs.hostPlatform = builtins.currentSystem;} ) ] ; })).options
+#   '';
+# };
+# home-manager = {
+#   expr = ''
+#     (builtins.getFlake ("git+file://" + toString ./.config/home-manager)).homeConfigurations."bryce".options
+#   '';
+# expr = ''
+#   (let pkgs = import <nixpkgs> { }; lib = import "${inputs.home-manager}/modules/lib/stdlib-extended.nix" pkgs.lib; in (lib.evalModules { modules =  (import "${inputs.home-manager}/modules/modules.nix") { inherit lib pkgs; check = false; }; })).options
+# '';
+

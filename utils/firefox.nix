@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   programs.firefox = {
@@ -29,14 +30,23 @@
         };
       };
       search.force = true;
-    };
 
-    # To find extension names run
-    # $ nix flake show "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons"
-    extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-      ublock-origin
-      sponsorblock
-      darkreader
-    ];
+      # To find extension names run
+      # $ nix flake show "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons"
+      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+        darkreader
+        duckduckgo-privacy-essentials
+        # enhancer-for-youtube
+        firefox-color
+        gruvbox-dark-theme
+        h264ify
+        istilldontcareaboutcookies
+        react-devtools
+        sponsorblock
+        ublock-origin
+        vimium
+        youtube-shorts-block
+      ];
+    };
   };
 }

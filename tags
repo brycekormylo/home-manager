@@ -4,8 +4,8 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	Development	//
-Center	ags/ags/config.js	/^function Center() {$/;"	f
-Left	ags/ags/config.js	/^function Left() {$/;"	f
-NormalWorkspaces	ags/ags/config.js	/^function NormalWorkspaces() {$/;"	f
-Right	ags/ags/config.js	/^function Right() {$/;"	f
-SysTray	ags/ags/config.js	/^function SysTray() {$/;"	f
+Center	gui/ags/ags/config.js	/^function Center() {$/;"	f
+Left	gui/ags/ags/config.js	/^function Left() {$/;"	f
+NormalWorkspaces	gui/ags/ags/config.js	/^function NormalWorkspaces() {$/;"	f
+Right	gui/ags/ags/config.js	/^function Right() {$/;"	f
+SysTray	gui/ags/ags/config.js	/^function SysTray() {$/;"	f

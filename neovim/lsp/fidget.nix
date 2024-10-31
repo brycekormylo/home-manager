@@ -2,7 +2,7 @@
   programs.nixvim.plugins.fidget = {
     enable = true;
     logger = {
-      level = "warn"; # “off”, “error”, “warn”, “info”, “debug”, “trace”
+      level = "debug"; # “off”, “error”, “warn”, “info”, “debug”, “trace”
       floatPrecision =
         1.0e-2; # Limit the number of decimals displayed for floats
     };
@@ -93,7 +93,7 @@
         winblend = 100;
         border = "solid"; # none, single, double, rounded, solid, shadow
         zindex = 45;
-        maxWidth = 60;
+        maxWidth = 100;
         maxHeight = 200;
         xPadding = 3;
         yPadding = 3;
