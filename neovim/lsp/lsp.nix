@@ -27,7 +27,7 @@
               options = {
                 nixos = {
                   expr = ''
-                    import <nixpkgs> { }
+                    (builtins.getFlake "./dot").nixosConfigurations.pathfinder.options',
                   '';
                 };
                 home_manager = {
